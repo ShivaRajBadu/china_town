@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- tailwind css  -->
+  <link rel="stylesheet" href="./dist/output.css">
+
+
+  <!-- splide -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+    integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <title>China Town</title>
+</head>
+<style>
+  .red_gradient {
+    background: linear-gradient(123.49deg, #FF4029 0.57%, #F02228 104.89%);
+  }
+
+  .orange_gradient {
+    background: linear-gradient(123.49deg, #FFA228 0.57%, #FB8E00 104.89%);
+  }
+
+  .green_gradient {
+    background: linear-gradient(123.49deg, #45C47A 0.57%, #00863A 104.89%);
+  }
+
+  .box_shadow {
+    box-shadow: 0px 6.71788px 11.5164px rgba(0, 0, 0, 0.25);
+  }
+
+  /* home slider custom */
+  .splide__arrow {
+    background: transparent !important;
+    opacity: 1;
+  }
+
+  .splide__arrow>* {
+    color: white;
+  }
+
+  .splide__arrow--prev img {
+    transform: none;
+
+  }
+
+
+  .splide__arrow:disabled {
+    opacity: 0.8;
+  }
+
+  .splide__arrow:hover:not(:disabled) {
+    opacity: 1 !important;
+  }
+</style>
+
+<body>
+  <div class="max-w-[1200px] mx-auto px-5 ">
+    <header class="py-6 font-['Poppins']">
+      <div class="flex justify-between items-center">
+        <!-- logo -->
+        <div>
+          <img src="./src/assets/Frame.png" alt="logo...">
+        </div>
+        <div class="flex gap-8 items-center">
+          <!-- navigation -->
+          <nav>
+            <ul class="flex gap-5 items-center">
+              <li><a class="text-[20px] font-['Poppins'] font-medium" href="#business_deals">Business Deals</a></li>
+              <li><a class="text-[20px] font-['Poppins'] font-medium" href="our_restaurant">Our Restaurants</a></li>
+              <li><a class="text-[20px] font-['Poppins'] font-medium" href="#join_us">Join Us</a></li>
+            </ul>
+          </nav>
+          <!-- icons   -->
+          <div class="flex gap-8 items-center">
+            <div style="filter: drop-shadow(0px 4.58427px 12.6067px rgba(0, 0, 0, 0.25));"
+              class="w-[50px] h-[50px] bg-white rounded-full flex justify-center items-center">
+              <img src="./src/assets/user_icon.png" alt="user icon">
+            </div>
+            <!-- cart -->
+            <div style="filter: drop-shadow(0px 4.58427px 12.6067px rgba(0, 0, 0, 0.25));"
+              class="w-[50px] h-[50px] bg-white rounded-full flex justify-center items-center relative">
+              <span
+                class="w-[19px] h-[19px] font-semibold text-[12.5px] font-['Inter'] bg-black text-white rounded-full absolute text-center right-0 -top-1">2</span>
+              <img src="./src/assets/cart.png" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </header>
+    <main class="font-['Poppins']">
+      <!-- hero section -->
+      <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide h-[556px] relative">
+              <div class="flex items-center justify-between w-full h-full px-16 orange_gradient">
+                <!-- background images or svg icons -->
+                <span class="absolute left-0 bottom-0"><svg width="99" height="129" viewBox="0 0 99 129" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="-23.3209" cy="122.246" r="94.0875" stroke="#FFB31F" stroke-opacity="0.5"
+                      stroke-width="56.2917" />
+                  </svg>
+                </span>
+                <span class="absolute top-8 -left-2 ">
+                  <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="139.523" cy="140.01" r="103.738" stroke="#FFB31F" stroke-opacity="0.5"
+                      stroke-width="71.5708" />
+                  </svg>
+
+                </span>
+                <span class="absolute top-0 left-[30%]">
+                  <svg width="167" height="83" viewBox="0 0 167 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="83.7458" cy="-5.34058e-05" r="66.7458" stroke="#FFB31F" stroke-opacity="0.5"
+                      stroke-width="32.1667" />
+                  </svg>
+
+                </span>
+                <span class="absolute top-0 right-0">
+                  <svg class="stroke-[#ffb31f]/90" width="109" height="278" viewBox="0 0 109 278" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="139.96" cy="137.915" r="103.738" stroke-opacity="0.5" stroke-width="71.5708" />
+                  </svg>
+
+                </span>
+                <span class="absolute right-0">
+                  <svg class="fill-[#f88c00]" width="737" height="556" viewBox="0 0 737 556" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="-37.1078" y="483.763" width="949.493" height="494.136" rx="97.3042"
+                      transform="rotate(-33.2984 -37.1078 483.763)" fill-opacity="0.5" />
+                  </svg>
+                </span>
+                <!-- text section -->
+                <div class="flex-1 pl-4 z-[2]">
+                  <h1 class="font-['Poppins'] font-bold text-white tracking-wider leading-[68px] text-[45px] ">
+                    The best chinese
+                    cusines you will
+                    get, enjoy it !</h1>
+                  <p class="text-[18px] font-normal text-[#FEFEFE] italic py-3 max-w-[422px]">Get <span
+                      class="font-bold">free
+                      delivery</span> by ordering
+                    <span class="font-bold">$10</span> or more from <span class="font-bold">chinatown.fi</span>
+                    or <span class="font-bold">our app</span> .
+                  </p>
+                  <button style="box-shadow: 0px 5.62917px 9.65px rgba(0, 0, 0, 0.25);"
+                    class="border-2 border-[#fff] font-['Poppins'] font-semibold text-[16px] text-white px-8 py-2 rounded-[26px] bg-[#FFA228]  text-center mt-8">Order
+                    Now</button>
+                </div>
+                <div class="z-[1]">
+                  <img src="./src/assets/home_pic_3.png" alt="">
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide h-[556px] relative">
+              <div class="flex items-center justify-between w-full h-full px-16 red_gradient">
+                <div class="flex-1 pl-4">
+                  <h1 class="font-['Poppins'] font-bold text-white tracking-wider leading-[68px] text-[45px] ">
+                    Stay
+                    Connected
+                    And Enjoy the
+                    delicious Food.</h1>
+                  <p class="text-[18px] font-normal text-[#FEFEFE] italic py-3 max-w-[422px]">Get <span
+                      class="font-bold">free
+                      delivery</span> by ordering
+                    <span class="font-bold">$10</span> or more from <span class="font-bold">chinatown.fi</span>
+                    or <span class="font-bold">our app</span> .
+                  </p>
+                  <button style="box-shadow: 0px 5.62917px 9.65px rgba(0, 0, 0, 0.25);"
+                    class="border-2 border-[#fff] font-['Poppins'] font-semibold text-[16px] text-white px-8 py-2 rounded-[26px] bg-[#F53627]  text-center mt-8">Order
+                    Now</button>
+                </div>
+                <div>
+                  <img src="./src/assets/home_pic_1.png" alt="">
+                </div>
+              </div>
+            </li>
+
+            <li class="splide__slide">
+              <div class="flex items-center justify-between w-full h-full px-16  green_gradient">
+                <span class="absolute left-0 bottom-0"><svg width="99" height="129" viewBox="0 0 99 129" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="-23.3209" cy="122.246" r="94.0875" stroke="#42C07680" stroke-opacity="0.5"
+                      stroke-width="56.2917" />
+                  </svg>
+                </span>
+                <span class="absolute top-8 -left-2 ">
+                  <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="139.523" cy="140.01" r="103.738" stroke="#42C07680" stroke-opacity="0.5"
+                      stroke-width="71.5708" />
+                  </svg>
+
+                </span>
+                <span class="absolute top-0 left-[30%]">
+                  <svg width="167" height="83" viewBox="0 0 167 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="83.7458" cy="-5.34058e-05" r="66.7458" stroke="#42C07680" stroke-opacity="0.5"
+                      stroke-width="32.1667" />
+                  </svg>
+
+                </span>
+                <span class="absolute top-0 right-0">
+                  <svg class="stroke-[#42C07680]" width="109" height="278" viewBox="0 0 109 278" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="139.96" cy="137.915" r="103.738" stroke-opacity="0.5" stroke-width="71.5708" />
+                  </svg>
+
+                </span>
+                <span class="absolute right-0">
+                  <svg class="fill-[#42C07680]" width="737" height="556" viewBox="0 0 737 556" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="-37.1078" y="483.763" width="949.493" height="494.136" rx="97.3042"
+                      transform="rotate(-33.2984 -37.1078 483.763)" fill-opacity="0.5" />
+                  </svg>
+                </span>
+                <div class="flex-1 pl-4 z-[2]">
+                  <h1 class="font-['Poppins'] font-bold text-white tracking-wider leading-[68px] text-[45px] ">
+                    The best chinese
+                    cusines you will
+                    get, enjoy it !</h1>
+                  <p class="text-[18px] font-normal text-[#FEFEFE] italic py-3 max-w-[422px]">Get <span
+                      class="font-bold">free
+                      delivery</span> by ordering
+                    <span class="font-bold">$10</span> or more from <span class="font-bold">chinatown.fi</span>
+                    or <span class="font-bold">our app</span> .
+                  </p>
+                  <button style="box-shadow: 0px 5.62917px 9.65px rgba(0, 0, 0, 0.25);"
+                    class="border-2 border-[#fff] font-['Poppins'] font-semibold text-[16px] text-white px-8 py-2 rounded-[26px] bg-[#00863A]  text-center mt-8">Order
+                    Now</button>
+                </div>
+                <div class="z-[2]">
+                  <img src="./src/assets/home_pic_3.png" alt="">
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- arrow button -->
+          <div class="splide__arrows splide__arrows--ltr">
+            <button class="splide__arrow splide__arrow--prev !text-white !bg-transparent  " type="button"
+              aria-label="Previous slide" aria-controls="splide01-track">
+              <img src="./src/assets/left_arrow.png" alt="">
+
+
+            </button>
+            <button class="splide__arrow splide__arrow--next !text-white !bg-transparent" type="button"
+              aria-label="Next slide" aria-controls="splide01-track">
+              <img src="./src/assets/right_arrow.png" alt="">
+
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- type of order -->
+      <section class="bg-[#B2FFD2] py-8 font-['Poppins']">
+        <div class="flex px-10 justify-between">
+          <button
+            class=" text-[19px] text-white font-semibold border-2 border-white bg-[#00863A] w-[204px] py-2  box_shadow rounded-[5px]">Home
+            Delivery</button>
+          <button
+            class=" text-[19px] text-white font-semibold border-2 border-white bg-[#00863A] w-[204px] py-2  box_shadow rounded-[5px]">Pick
+            Up</button>
+          <button
+            class=" text-[19px] text-white font-semibold border-2 border-white bg-[#00863A] w-[283px] py-2  box_shadow rounded-[5px]">Eat
+            in Restaurant</button>
+          <button
+            class=" text-[19px] text-white font-semibold border-2 border-white bg-[#00863A] w-[204px] py-2  box_shadow rounded-[5px]">Your
+            Faviourate</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+  <script>
+    new Splide( '.splide', {
+      pagination: false
+
+    } ).mount();
+  </script>
+</body>
+
+</html>
