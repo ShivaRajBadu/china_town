@@ -9,8 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+
+
   <!-- tailwind css  -->
   <link rel="stylesheet" href="./dist/output.css">
 
@@ -41,7 +43,7 @@
   /* home slider custom */
   .splide__arrow {
     background: transparent !important;
-    opacity: 1;
+    opacity: 1 !important;
   }
 
   .splide__arrow>* {
@@ -132,6 +134,45 @@
 
   .popular .splide__arrow--next {
     right: -3rem;
+  }
+
+  .menu_underline::after {
+    content: ' ';
+    position: absolute;
+    width: 80%;
+    height: 6px;
+    background: #FFA228;
+    bottom: -8px;
+    left: 10%;
+
+  }
+
+  .upper_content_shadow {
+    box-shadow: 0px 12.8994px 13.8208px rgba(255, 162, 40, 0.01), 0px 24.8774px 75.5535px rgba(255, 162, 40, 0.6);
+  }
+
+  .shadow {
+    box-shadow: 0px 3.95946px 6.33513px rgba(187, 32, 40, 0.24), 0px 11.0865px 25.3405px rgba(187, 32, 40, 0.29);
+  }
+
+  .card_shadow {
+    filter: drop-shadow(0px 11.0865px 11.8784px rgba(124, 124, 124, 0.06)) drop-shadow(0px 21.3811px 64.9351px rgba(124, 124, 124, 0.28));
+  }
+
+  .chef_background {
+    background-color: rgba(247, 61, 39, 0.5);
+    background-image: url('./src/assets/mask.svg');
+    background-blend-mode: color-dodge;
+
+  }
+
+  .after_line::after {
+    content: ' ';
+    position: absolute;
+    right: 0;
+    width: 2px;
+    height: 40%;
+    background: #CFCFCF;
   }
 </style>
 
@@ -364,10 +405,9 @@
 
 
         <div class="flex justify-between my-6  gap-8 w-full">
-          <div class="w-[132px]   mx-5 cursor-pointer text-center">
+          <div class="w-[132px]    mx-5 cursor-pointer text-center">
             <img class="w-full h-full object-contain" src="./src/assets/menu_1.png" alt="">
-            <h4
-              class="text-[14px] font-medium relative after:content-[' '] after:absolute after:w-[70%] after:-bottom-[5px] after:left-[12%] after:h-1 after:bg-[#FFA228] ">
+            <h4 class="text-[14px] menu_underline font-medium relative  ">
               Appetizer</h4>
           </div>
           <div class="w-[132px]  mx-5 cursor-pointer text-center">
@@ -649,20 +689,124 @@
       </div>
 
     </div>
-    <!-- chef words -->
-    <div class="bg-[#F73D27]">
-      <div class="max-w-[1200px] mx-auto">
-        <div>
-          <img src="" alt="">
-        </div>
-        <div>
-          <p>Chef’s Word</p>
-          <h1>What we believe in</h1>
+    <!-- for making the absolute div in center  -->
+    <div class="relative">
+      <!-- chef words -->
+      <div class=" pb-14 pt-20  font-['Poppins'] chef_background h-[841px]">
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between ">
+          <div class="flex-1 ">
+            <div class="relative w-[398px] h-[548px]">
+              <div class=" absolute -top-3  -right-3 w-[326px] h-[326px] bg-[#FFA228]"></div>
+              <img class=" z-[2] relative w-full h-full object-cover" src="./src/assets/chef_1.jpg" alt="">
+              <div class=" absolute  -left-3 -bottom-3  w-[326px] h-[326px] bg-[#FFA228]"></div>
+            </div>
+
+          </div>
+          <div class="flex-1">
+            <p class="text-[16px] font-bold tracking-[0.04em] capitalize text-white leading-[130%] pt-2">Chef’s Word</p>
+            <h1
+              class="text-[44px] font-semibold text-[#FFA228] tracking-[0.03em] capitalize my-3 py-2 mb-8 leading-[175%]">
+              What we
+              believe in
+            </h1>
+            <div class="  my-12  max-w-[78%]">
+              <div class="flex items-end gap-2 text-[#AAAAAA]  text-start">
+                <img src="./src/assets/comma.svg" alt="">
+                <p class="tracking-[0.04em] text-[14px] font-normal">Lorem ipsum dolor sit
+                  amet
+                  consectetur
+                  elit.</p>
+              </div>
+              <p class="text-[#AAAAAA] tracking-[0.04em] text-[14px] font-normal "> auctor sit iaculis in arcu.
+                Vulputate
+                nulla
+                lobortis mauris eget sit. Nulla scelerisque scelerisque congue ac consequat,
+                aliquam molestie lectus eu. Congue iaculis integer curabitur semper sit nunc.</p>
+
+            </div>
+            <h3 style="font-family:'Cormorant Upright' ;"
+              class="text-[24px] font-normal tracking-[0.04em] capitalize text-[#FFA228] ">
+              Kevin Luo</h3>
+            <p class="text-[12px] font-normal tracking-[0.04em] text-[#AAAAAA] ">Chef & Founder</p>
+            <div class="mt-8">
+              <img src="./src/assets/Kevin Luo.svg" alt="">
+            </div>
+          </div>
+
         </div>
 
       </div>
+      <!-- upper content -->
+      <div
+        class="w-[1172px]  absolute top-[52%] upper_content_shadow rounded-[34px] left-[47%] translate-x-[-47%] translate-y-[-52%]   h-[226px] bg-[#fff] py-8 px-10 flex gap-[2rem] ">
+        <div class="flex items-center gap-3  relative after_line">
+          <div class="w-[125px] h-[125px]">
+            <img class="w-full h-full object-contain" src="./src/assets/Group 9376.svg" alt="">
+          </div>
+          <div>
+            <h2 class="text-[30px] font-medium leading-[120%] text-[#212121] ">Daily
+              <span class="block">Discount</span>
+            </h2>
+            <p class="text-[12px] text-normal leading-[120%] text-[#212121] max-w-[70%]">Description Goes Here
+              In Detail With Some
+              Informations.</p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-center   relative after_line">
+          <div class="w-[125px] h-[125px]">
+            <img class="w-full h-full object-contain" src="./src/assets/Group 9377.svg" alt="">
+          </div>
+          <div>
+            <h2 class="text-[30px] font-medium leading-[120%] text-[#212121] ">Lots of
+              <span class="block">Benefit for you</span>
+            </h2>
+            <p class="text-[12px] text-normal leading-[120%] text-[#212121] max-w-[70%]">Description Goes Here
+              In Detail With Some
+              Informations.</p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-center   ">
+          <div class="w-[125px] h-[125px]">
+            <img class="w-full h-full object-contain" src="./src/assets/Group 9378.svg" alt="">
+          </div>
+          <div>
+            <h2 class="text-[30px] font-medium leading-[120%] text-[#212121]">Quick Delivery
+              <span class="block">or Pickup</span>
+            </h2>
+            <p class="text-[12px] text-normal leading-[120%] text-[#212121] max-w-[70%]">Description Goes Here
+              In Detail With Some
+              Informations.</p>
+          </div>
+        </div>
+      </div>
+      <!-- best deal chinese -->
+      <div class="bg-[#FFA228] h-[737px]  pt-[10rem] ">
+        <div class="max-w-[1200px] mx-auto flex rounded-[13px] overflow-hidden h-[405px] card_shadow">
+          <div class="w-[410px]  bg-white px-8 pt-20 pb-10   flex justify-between items-center flex-col">
+            <div>
+              <h1 style="font-family: 'Open Sans';" class="  text-[#353535] font-bold text-[35px] leading-[112%]">Best
+                deals <span class="text-[#BB2028]">Chinese
+                  for your Business</span></h1>
+              <p class="text-[14px] font-semibold  text-[#616161B0]/70 my-3">Enjoy the chinese tradition cusine.
+                Complete
+                perfect taste with all ingridients.</p>
+            </div>
 
+            <button class=" bg-[#BB2028] w-[322px] h-[48px] rounded-[7px] shadow  text-white">LEARN MORE</button>
+          </div>
+          <div class="w-[70%]  w-[761px] overflow-hidden">
+            <img class="w-full h-full object-cover" src="./src/assets/Right.png" alt="">
+          </div>
+        </div>
+        <div class="max-w-[1200px] mx-auto w-full px-5 flex justify-between mt-16">
+          <p class="text-[32px] font-medium leading-[140%] text-white">You decide, we do it for you.</p>
+
+          <p class="text-[32px] font-medium leading-[140%] text-white tracking-[0.15em]">你決定，我們為你做。</p>
+        </div>
+
+      </div>
     </div>
+
 
   </main>
   <footer>
