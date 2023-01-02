@@ -78,7 +78,8 @@ const modal_3 = document.getElementById("modal_3");
 const body = document.querySelector("body");
 
 function closeModal(event) {
-  event.target.parentElement.parentElement.parentElement.style.display = "none";
+  console.log(event.target.parentNode.parentNode.parentNode);
+  event.target.parentNode.parentNode.parentNode.style.display = "none";
   body.style.overflow = "auto";
 }
 function handleModal() {
