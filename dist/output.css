@@ -1040,6 +1040,10 @@ video {
   max-width: 190px;
 }
 
+.max-w-\[127px\] {
+  max-width: 127px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1138,6 +1142,12 @@ video {
 
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .rounded-full {

@@ -213,6 +213,14 @@
     background: #CFCFCF;
   }
 
+  /* line clamp */
+  .line_clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   .change>img:first-child {
     display: block;
   }
@@ -499,7 +507,7 @@
               <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
             </div>
             <!-- food name -->
-            <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
+            <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-5 line_clamp">Egg Vegetable
               Soup Appetizer</h3>
           </div>
 
@@ -516,7 +524,7 @@
             <img class="w-full h-full object-cover" src="./src/assets/menu_3.png" alt="">
           </div>
           <!-- food name -->
-          <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
+          <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-5 line_clamp">Egg Vegetable
             Soup Appetizer</h3>
         </div>
         <div
@@ -531,7 +539,7 @@
             <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
           </div>
           <!-- food name -->
-          <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
+          <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-6 line_clamp">Chicken Corn
             Soup Appetizer</h3>
         </div>
         <div
@@ -546,7 +554,9 @@
             <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
           </div>
           <!-- food name -->
-          <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
+          <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-5  line_clamp">
+            Chinese Mushroom
+            Chicken
             Soup Appetizer</h3>
         </div>
         <div
@@ -561,7 +571,7 @@
             <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
           </div>
           <!-- food name -->
-          <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
+          <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-5 line_clamp">Chicken Corn
             Soup Appetizer</h3>
         </div>
         <div
@@ -576,7 +586,7 @@
             <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
           </div>
           <!-- food name -->
-          <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
+          <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-5 line_clamp">Seafood
             Soup Appetizer</h3>
         </div>
         <div
@@ -591,7 +601,8 @@
             <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
           </div>
           <!-- food name -->
-          <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
+          <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-5 line_clamp">Shrimp
+            Vegetable
             Soup Appetizer</h3>
         </div>
         <div
@@ -606,7 +617,7 @@
             <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
           </div>
           <!-- food name -->
-          <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
+          <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-5 line_clamp">Crab Tofu
             Soup Appetizer</h3>
         </div>
         <div
@@ -621,7 +632,7 @@
             <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
           </div>
           <!-- food name -->
-          <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
+          <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-5 line_clamp">Beijing
             Soup Appetizer</h3>
         </div>
         <div
@@ -636,8 +647,8 @@
             <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
           </div>
           <!-- food name -->
-          <h3 class="font-['Poppins'] text-[14px] font-medium max-w-[117px] text-center py-1 mx-auto">Egg Vegetable
-            Soup Appetizer</h3>
+          <h3 class="font-['Poppins'] text-[14px] font-medium  text-center py-1 mx-auto px-5 line_clamp">Spring Roll
+            Appetizer</h3>
         </div>
       </div>
       <!-- most popular section -->
@@ -908,6 +919,417 @@
 
 
     <!--three  modal data  -->
+
+    <!-- first modal -->
+    <div id="modal_1"
+      class="fixed  z-[5]   top-0 left-0 h-screen w-[99.45vw] hidden justify-center items-center bg-[#000]/50">
+      <div class="w-[840px] h-[810px] rounded-[5px] p-6 border relative bg-white font-['Poppins']">
+        <button onclick="closeModal(event)"
+          class="text-white absolute w-[32px] h-[32px] rounded-full bg-[#006C2F] right-2 top-2 grid place-content-center">
+          <img src="./src/assets/radix-icons_cross-1.png" alt="">
+        </button>
+        <!-- img -->
+        <div class="bg-[#B2FFD2] w-full h-[310px]">
+          <div class="mx-auto  w-[501px] h-[259px]">
+            <img class=" max-w-full object-cover" src="./src/assets/Chinese-Food-PNG-HD-Quality 3.png" alt="">
+          </div>
+        </div>
+        <div>
+          <!-- choose options to eat -->
+          <div class="flex justify-between items-center max-w-[70%] mx-auto py-6">
+            <button class="px-6 py-3 bg-[#006C2F] text-[14px] font-semibold  text-white rounded-[4px]">Home
+              Delivery</button>
+            <button onclick="pickUp()"
+              class="px-10 py-3 bg-[#006C2F] text-[14px] font-semibold  text-white rounded-[4px]">Pick
+              Up</button>
+            <button onclick="eatAtRestaurent()"
+              class="px-8 py-3 bg-[#006C2F] text-[14px] font-semibold  text-white rounded-[4px]">Eat in
+              Restaurant</button>
+          </div>
+          <!-- product information -->
+          <div>
+            <!-- food name and price -->
+            <div class="flex justify-between items-center border-b pb-4">
+              <div>
+                <h1 class="text-[#3B3B3C] text-[26px] font-medium leading-[39px] py-1">Chicken Chop Suey Chicken</h1>
+                <p class="text-[#9A9A9A] font-medium text-[18px] leading-[27px] py-1">The portion includes rice</p>
+              </div>
+              <!-- price -->
+              <p class="text-[#FE0000] text-[26px] font-medium ">11.50 €</p>
+            </div>
+            <!-- choose a product -->
+            <div class=" my-4">
+              <div class="flex justify-between items-center py-1">
+                <h3 class="text-[22px] font-medium text-[#3B3B3C] leading-[33px]">Choose a product</h3>
+                <p class="text-[#FE0000] text-[18px] font-medium leading-[27px]">1 required</p>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <label class="flex items-center  gap-2 " for="dose">
+                  <input type="checkbox" name="dose" id="dose">
+                  <span class="text-[19px] font-normal text-[#3B3B3C] "> Dose</span>
+                </label>
+                <p class="text-[#9A9A9A] font-medium text-[18px]">11.50 €</p>
+              </div>
+            </div>
+            <!-- third section -->
+            <div>
+              <h2 class="text-[#3B3B3C] text-[22px] font-medium leading-[33px] py-2">
+                Additional Requests
+              </h2>
+              <input style="border: 1px solid #C5C5C5;"
+                class="w-full py-2 indent-3  border text-[#3B3B3C] font-medium text-[15px] leading-[22px]" type="text"
+                placeholder="message">
+            </div>
+            <!-- fourth -->
+            <div class="w-full flex  items-center justify-between my-2">
+              <div class="flex w-[126px] h-[46px] rounded-[5px] border border-[#3B3B3C] my-3 overflow-hidden">
+                <p class="w-[40px] bg-white text-center text-[#3B3B3C] font-medium text-[30px] h-full leading-[45px] ">
+                  1
+                </p>
+                <p
+                  class="bg-[#000] h-full text-[#FBFBFB] text-[30px] font-medium cursor-pointer leading-[45px] w-[43px] text-center">
+                  +
+                </p>
+                <p
+                  class="bg-[#000] cursor-pointer h-full text-[#FBFBFB] text-[30px] font-medium leading-[45px] px-2 w-[43px] text-center">
+                  -</p>
+              </div>
+              <button
+                class="max-w-[608px] w-full h-[46px] rounded-[5px] text-[#FBFBFB] font-medium text-[20px] leading-[30px] bg-[#D9D9D9] ">Add
+                to Cart</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- second -->
+    <div id="modal_2"
+      class="fixed  z-[5]    top-0 left-0 h-screen w-[99.45vw] hidden justify-center items-center bg-[#000]/50">
+      <div class="w-[941px] h-[769px] rounded-[5px]  font-['Poppins']  ">
+        <p onclick="closeModal(event)" class="w-full    bg-[#009541] py-2 px-4">
+          <img class=" cursor-pointer ml-auto text-white" src="./src/assets/radix-icons_cross-1.png" alt="">
+        </p>
+        <div class="px-12 pt-4 pb-6  rounded-[5px] bg-[#009541]">
+
+
+          <div class="flex justify-between mb-2  mt-6">
+            <h1 class="text-[30px] font-semibold text-white">Select Your Favourate Place</h1>
+            <button
+              class="  text-[19px] text-white font-semibold border-2 border-white bg-[#006C2F] hover:bg-[#00863ad1] hover:border-[#faa333] duration-200 w-[260px] h-[56px]  box_shadow rounded-[5px] text-center">Eat
+              in Restaurant</button>
+          </div>
+          <div class="py-2">
+            <h2 class="text-[30px] font-semibold text-white">Search for Restaurants</h2>
+            <p class="text-[15px] font-normal text-white pb-2">The restaurant’s location for your food.</p>
+          </div>
+          <div class="w-full flex items-center justify-between gap-2 pb-2">
+            <input type="text" placeholder=""
+              class="w-[85%] border-none outline-none max-w-[627px] h-[57px] indent-4 bg-white rounded-[5px] text-[#3B3B3C]">
+            <button class="w-[20%] max-w-[190px] h-[57px] bg-[#006C2F] text-white rounded-[5px]">Search</button>
+          </div>
+        </div>
+        <div class="bg-white w-full px-12 rounded-[5px] py-4">
+          <h1 class="text-[30px] font-semibold text-black pb-4 pt-2">Restaurants around you</h1>
+          <div class="my-2">
+            <div class="flex justify-between items-center py-4 border-t border-[#C5C5C5]">
+              <h3 onclick="openRestaurent()" class="text-[23px] w-[35%] text-[#3B3B3C] font-semibold cursor-pointer">
+                Restaurant Ali
+                Baba</h3>
+              <p class="text-[#9A9A9A] w-[35%] text-[18px] font-normal">Jyavaskula Seppala</p>
+              <p class="text-[#3B3B3C] w-[10%] flex items-center justify-end  gap-2 text-[16px] font-medium py-1">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 0C4.40926 0.0018906 2.88418 0.664767 1.75935 1.8432C0.634525 3.02164 0.00180459 4.6194 0 6.28596C0 11.6647 5.45455 15.7292 5.68636 15.9006C5.77927 15.9654 5.88839 16 6 16C6.11161 16 6.22073 15.9654 6.31364 15.9006C6.54545 15.7292 12 11.6647 12 6.28596C11.9982 4.6194 11.3655 3.02164 10.2406 1.8432C9.11582 0.664767 7.59075 0.0018906 6 0ZM6 4.00016C6.43152 4.00016 6.85336 4.13422 7.21215 4.38538C7.57095 4.63655 7.8506 4.99354 8.01574 5.41122C8.18087 5.8289 8.22408 6.28849 8.1399 6.7319C8.05571 7.1753 7.84791 7.58259 7.54278 7.90227C7.23765 8.22194 6.84888 8.43964 6.42565 8.52784C6.00242 8.61604 5.56373 8.57077 5.16505 8.39777C4.76638 8.22476 4.42563 7.93178 4.18588 7.55588C3.94614 7.17998 3.81818 6.73805 3.81818 6.28596C3.81818 5.67973 4.04805 5.09832 4.45722 4.66965C4.86639 4.24098 5.42135 4.00016 6 4.00016Z"
+                    fill="#3B3B3C" />
+                </svg>
+                <span>2.5 km</span>
+              </p>
+              <p class="flex w-[10%] justify-end items-center text-[#3B3B3C] text-[16px] font-medium gap-2 ">
+                <span class="w-[8px] h-[8px] rounded-full bg-[#0AF907]"></span>
+                Open
+              </p>
+            </div>
+            <div class="flex justify-between items-center py-4 border-t border-[#C5C5C5]">
+              <h3 onclick="openRestaurent()" class="text-[23px] text-[#3B3B3C] w-[35%] font-semibold cursor-pointer">
+                Test Restaurant</h3>
+              <p class="text-[#9A9A9A] text-[18px] font-normal w-[35%]">Jyavaskula Kauppakatu</p>
+              <p class="text-[#3B3B3C] flex items-center justify-end  gap-2 w-[10%] text-[16px] font-medium py-1">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 0C4.40926 0.0018906 2.88418 0.664767 1.75935 1.8432C0.634525 3.02164 0.00180459 4.6194 0 6.28596C0 11.6647 5.45455 15.7292 5.68636 15.9006C5.77927 15.9654 5.88839 16 6 16C6.11161 16 6.22073 15.9654 6.31364 15.9006C6.54545 15.7292 12 11.6647 12 6.28596C11.9982 4.6194 11.3655 3.02164 10.2406 1.8432C9.11582 0.664767 7.59075 0.0018906 6 0ZM6 4.00016C6.43152 4.00016 6.85336 4.13422 7.21215 4.38538C7.57095 4.63655 7.8506 4.99354 8.01574 5.41122C8.18087 5.8289 8.22408 6.28849 8.1399 6.7319C8.05571 7.1753 7.84791 7.58259 7.54278 7.90227C7.23765 8.22194 6.84888 8.43964 6.42565 8.52784C6.00242 8.61604 5.56373 8.57077 5.16505 8.39777C4.76638 8.22476 4.42563 7.93178 4.18588 7.55588C3.94614 7.17998 3.81818 6.73805 3.81818 6.28596C3.81818 5.67973 4.04805 5.09832 4.45722 4.66965C4.86639 4.24098 5.42135 4.00016 6 4.00016Z"
+                    fill="#3B3B3C" />
+                </svg>
+                <span>2.5 km</span>
+              </p>
+              <p class="w-[10%] flex justify-end items-center text-[#3B3B3C] text-[16px] font-medium gap-2 ">
+                <span class="w-[8px] h-[8px] rounded-full bg-[#0AF907]"></span>
+                Open
+              </p>
+            </div>
+            <div class="flex justify-between items-center py-4 border-t border-[#C5C5C5]">
+              <h3 onclick="openRestaurent()" class="text-[23px] w-[35%] text-[#3B3B3C] font-semibold cursor-pointer">
+                China Town Ravintola</h3>
+              <p class="text-[#9A9A9A] text-[18px] font-normal w-[35%]">Jyavaskula Seppala</p>
+              <p class="text-[#3B3B3C] w-[10%] flex items-center justify-end  gap-2 text-[16px] font-medium py-1">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 0C4.40926 0.0018906 2.88418 0.664767 1.75935 1.8432C0.634525 3.02164 0.00180459 4.6194 0 6.28596C0 11.6647 5.45455 15.7292 5.68636 15.9006C5.77927 15.9654 5.88839 16 6 16C6.11161 16 6.22073 15.9654 6.31364 15.9006C6.54545 15.7292 12 11.6647 12 6.28596C11.9982 4.6194 11.3655 3.02164 10.2406 1.8432C9.11582 0.664767 7.59075 0.0018906 6 0ZM6 4.00016C6.43152 4.00016 6.85336 4.13422 7.21215 4.38538C7.57095 4.63655 7.8506 4.99354 8.01574 5.41122C8.18087 5.8289 8.22408 6.28849 8.1399 6.7319C8.05571 7.1753 7.84791 7.58259 7.54278 7.90227C7.23765 8.22194 6.84888 8.43964 6.42565 8.52784C6.00242 8.61604 5.56373 8.57077 5.16505 8.39777C4.76638 8.22476 4.42563 7.93178 4.18588 7.55588C3.94614 7.17998 3.81818 6.73805 3.81818 6.28596C3.81818 5.67973 4.04805 5.09832 4.45722 4.66965C4.86639 4.24098 5.42135 4.00016 6 4.00016Z"
+                    fill="#3B3B3C" />
+                </svg>
+                <span>2.5 km</span>
+              </p>
+              <p class="flex w-[10%] justify-end items-center text-[#3B3B3C] text-[16px] font-medium gap-2 ">
+                <span class="w-[8px] h-[8px] rounded-full bg-[#0AF907]"></span>
+                Open
+              </p>
+            </div>
+            <div class="flex justify-between items-center py-4 border-t border-[#C5C5C5]">
+              <h3 onclick="openRestaurent()" class="text-[23px] w-[35%] text-[#3B3B3C] font-semibold cursor-pointer">
+                China Town Ravintola</h3>
+              <p class="text-[#9A9A9A] text-[18px] font-normal w-[35%]">Jyavaskula Seppala</p>
+              <p class="text-[#3B3B3C] w-[10%] flex items-center justify-end  gap-2 text-[16px] font-medium py-1">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 0C4.40926 0.0018906 2.88418 0.664767 1.75935 1.8432C0.634525 3.02164 0.00180459 4.6194 0 6.28596C0 11.6647 5.45455 15.7292 5.68636 15.9006C5.77927 15.9654 5.88839 16 6 16C6.11161 16 6.22073 15.9654 6.31364 15.9006C6.54545 15.7292 12 11.6647 12 6.28596C11.9982 4.6194 11.3655 3.02164 10.2406 1.8432C9.11582 0.664767 7.59075 0.0018906 6 0ZM6 4.00016C6.43152 4.00016 6.85336 4.13422 7.21215 4.38538C7.57095 4.63655 7.8506 4.99354 8.01574 5.41122C8.18087 5.8289 8.22408 6.28849 8.1399 6.7319C8.05571 7.1753 7.84791 7.58259 7.54278 7.90227C7.23765 8.22194 6.84888 8.43964 6.42565 8.52784C6.00242 8.61604 5.56373 8.57077 5.16505 8.39777C4.76638 8.22476 4.42563 7.93178 4.18588 7.55588C3.94614 7.17998 3.81818 6.73805 3.81818 6.28596C3.81818 5.67973 4.04805 5.09832 4.45722 4.66965C4.86639 4.24098 5.42135 4.00016 6 4.00016Z"
+                    fill="#3B3B3C" />
+                </svg>
+                <span>2.5 km</span>
+              </p>
+              <p class="flex w-[10%] justify-end items-center text-[#3B3B3C] text-[16px] font-medium gap-2 ">
+                <span class="w-[8px] h-[8px] rounded-full bg-[#0AF907]"></span>
+                Open
+              </p>
+            </div>
+            <div class="flex justify-between items-center py-4 border-t border-[#C5C5C5]">
+              <h3 onclick="openRestaurent()" class="text-[23px] w-[35%] text-[#3B3B3C] font-semibold cursor-pointer">
+                China Town Ravintola</h3>
+              <p class="text-[#9A9A9A] text-[18px] font-normal w-[35%]">Jyavaskula Seppala</p>
+              <p class="text-[#3B3B3C] w-[10%] flex items-center justify-end  gap-2 text-[16px] font-medium py-1">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 0C4.40926 0.0018906 2.88418 0.664767 1.75935 1.8432C0.634525 3.02164 0.00180459 4.6194 0 6.28596C0 11.6647 5.45455 15.7292 5.68636 15.9006C5.77927 15.9654 5.88839 16 6 16C6.11161 16 6.22073 15.9654 6.31364 15.9006C6.54545 15.7292 12 11.6647 12 6.28596C11.9982 4.6194 11.3655 3.02164 10.2406 1.8432C9.11582 0.664767 7.59075 0.0018906 6 0ZM6 4.00016C6.43152 4.00016 6.85336 4.13422 7.21215 4.38538C7.57095 4.63655 7.8506 4.99354 8.01574 5.41122C8.18087 5.8289 8.22408 6.28849 8.1399 6.7319C8.05571 7.1753 7.84791 7.58259 7.54278 7.90227C7.23765 8.22194 6.84888 8.43964 6.42565 8.52784C6.00242 8.61604 5.56373 8.57077 5.16505 8.39777C4.76638 8.22476 4.42563 7.93178 4.18588 7.55588C3.94614 7.17998 3.81818 6.73805 3.81818 6.28596C3.81818 5.67973 4.04805 5.09832 4.45722 4.66965C4.86639 4.24098 5.42135 4.00016 6 4.00016Z"
+                    fill="#3B3B3C" />
+                </svg>
+                <span>2.5 km</span>
+              </p>
+              <p class="flex w-[10%] justify-end items-center text-[#3B3B3C] text-[16px] font-medium gap-2 ">
+                <span class="w-[8px] h-[8px] rounded-full bg-[#0AF907]"></span>
+                Open
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- second modal -->
+    <div id="modal_3"
+      class="fixed  z-[5]   top-0 left-0 h-screen w-[99.45vw] hidden justify-center items-center bg-[#000]/50">
+      <div class="w-[840px] h-[805px] rounded-[5px] p-6 border relative bg-white font-['Poppins']">
+        <button onclick="closeModal(event)"
+          class="text-white absolute w-[32px] h-[32px] rounded-full bg-[#006C2F] right-2 top-2 grid place-content-center">
+          <img src="./src/assets/radix-icons_cross-1.png" alt="">
+        </button>
+        <!-- img -->
+        <div class="bg-[#B2FFD2] w-full h-[310px]">
+          <div class="mx-auto  w-[501px] h-[259px]">
+            <img class=" max-w-full object-cover" src="./src/assets/Chinese-Food-PNG-HD-Quality 3.png" alt="">
+          </div>
+        </div>
+        <div>
+          <!-- choose options to eat -->
+          <div class="flex justify-between items-center   py-4">
+            <div class="flex w-[80%] items-center gap-8">
+              <button style="border: 2.1657px solid #FFFFFF;
+          box-shadow: 0px 5.05331px 8.66281px rgba(0, 0, 0, 0.25);"
+                class="max-w-[221px] w-[50%] h-[46px]  bg-[#FFC71F] text-[14px] font-semibold block  text-[#3B3B3C] rounded-[4px]">Eat
+                in
+                Restaurant</button>
+              <div style="border-left: 1px solid #C5C5C5;" class="w-[50%] pl-6">
+                <h2 class="text-[20px] text-[#3B3B3C] font-semibold">Restaurant Ali Baba</h2>
+                <p class="text-[16px] text-[#9A9A9A] font-normal">Jyavaskula Seppala</p>
+              </div>
+            </div>
+
+            <!-- status (open or close) and kilometer -->
+            <div class="w-[20%]">
+              <p class="text-[#3B3B3C] flex items-center justify-end  gap-2 text-[16px] font-medium py-1">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 0C4.40926 0.0018906 2.88418 0.664767 1.75935 1.8432C0.634525 3.02164 0.00180459 4.6194 0 6.28596C0 11.6647 5.45455 15.7292 5.68636 15.9006C5.77927 15.9654 5.88839 16 6 16C6.11161 16 6.22073 15.9654 6.31364 15.9006C6.54545 15.7292 12 11.6647 12 6.28596C11.9982 4.6194 11.3655 3.02164 10.2406 1.8432C9.11582 0.664767 7.59075 0.0018906 6 0ZM6 4.00016C6.43152 4.00016 6.85336 4.13422 7.21215 4.38538C7.57095 4.63655 7.8506 4.99354 8.01574 5.41122C8.18087 5.8289 8.22408 6.28849 8.1399 6.7319C8.05571 7.1753 7.84791 7.58259 7.54278 7.90227C7.23765 8.22194 6.84888 8.43964 6.42565 8.52784C6.00242 8.61604 5.56373 8.57077 5.16505 8.39777C4.76638 8.22476 4.42563 7.93178 4.18588 7.55588C3.94614 7.17998 3.81818 6.73805 3.81818 6.28596C3.81818 5.67973 4.04805 5.09832 4.45722 4.66965C4.86639 4.24098 5.42135 4.00016 6 4.00016Z"
+                    fill="#3B3B3C" />
+                </svg>
+                <span>2.5 km</span>
+              </p>
+              <p class="flex justify-end items-center text-[#3B3B3C] text-[16px] font-medium gap-2 ">
+                <span class="w-[8px] h-[8px] rounded-full bg-[#0AF907]"></span>
+                Open
+              </p>
+            </div>
+
+          </div>
+          <!-- product information -->
+          <div>
+            <!-- food name and price -->
+            <div class="flex justify-between items-center border-b pb-4">
+              <div>
+                <h1 class="text-[#3B3B3C] text-[26px] font-medium leading-[39px] py-1">Chicken Chop Suey Chicken</h1>
+                <p class="text-[#9A9A9A] font-medium text-[18px] leading-[27px] py-1">The portion includes rice</p>
+              </div>
+              <!-- price -->
+              <p class="text-[#FE0000] text-[26px] font-medium ">11.50 €</p>
+            </div>
+            <!-- choose a product -->
+            <div class=" my-4">
+              <div class="flex justify-between items-center py-1">
+                <h3 class="text-[22px] font-medium text-[#3B3B3C] leading-[33px]">Choose a product</h3>
+                <p class="text-[#FE0000] text-[18px] font-medium leading-[27px]">1 required</p>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <label class="flex items-center  gap-2 " for="dose">
+                  <input type="checkbox" name="dose" id="dose">
+                  <span class="text-[19px] font-normal text-[#3B3B3C] "> Dose</span>
+                </label>
+                <p class="text-[#9A9A9A] font-medium text-[18px]">11.50 €</p>
+              </div>
+            </div>
+            <!-- third section -->
+            <div>
+              <h2 class="text-[#3B3B3C] text-[22px] font-medium leading-[33px] py-2">
+                Additional Requests
+              </h2>
+              <input style="border: 1px solid #C5C5C5;"
+                class="w-full py-2 indent-3  border text-[#3B3B3C] font-medium text-[15px] leading-[22px]" type="text"
+                placeholder="message">
+            </div>
+            <!-- fourth -->
+            <div class="w-full flex  items-center justify-between my-2">
+              <div class="flex w-[126px] h-[46px] rounded-[5px] border border-[#3B3B3C] my-3 overflow-hidden">
+                <p class="w-[40px] bg-white text-center text-[#3B3B3C] font-medium text-[30px] h-full leading-[45px] ">
+                  1
+                </p>
+                <p
+                  class="bg-[#000] h-full text-[#FBFBFB] text-[30px] font-medium cursor-pointer leading-[45px] w-[43px] text-center">
+                  +
+                </p>
+                <p
+                  class="bg-[#000] cursor-pointer h-full text-[#FBFBFB] text-[30px] font-medium leading-[45px] px-2 w-[43px] text-center">
+                  -</p>
+              </div>
+              <button
+                class="max-w-[608px] w-full h-[46px] rounded-[5px] text-[#FBFBFB] font-medium text-[20px] leading-[30px] bg-[#D9D9D9] ">Add
+                to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fourth -->
+    <div id="modal_4"
+      class="fixed  z-[5]   top-0 left-0 h-screen w-[99.45vw] hidden justify-center items-center bg-[#000]/50">
+      <div class="w-[840px] h-[805px] rounded-[5px] p-6 border relative bg-white font-['Poppins']">
+        <button onclick="closeModal(event)"
+          class="text-white absolute w-[32px] h-[32px] rounded-full bg-[#006C2F] right-2 top-2 grid place-content-center">
+          <img src="./src/assets/radix-icons_cross-1.png" alt="">
+        </button>
+        <!-- img -->
+        <div class="bg-[#B2FFD2] w-full h-[310px]">
+          <div class="mx-auto  w-[501px] h-[259px]">
+            <img class=" max-w-full object-cover" src="./src/assets/Chinese-Food-PNG-HD-Quality 3.png" alt="">
+          </div>
+        </div>
+        <div>
+          <!-- choose options to eat -->
+          <div class="flex justify-between items-center   py-4">
+            <div class="flex w-[80%] items-center gap-8">
+              <button style="border: 2.1657px solid #FFFFFF;
+              box-shadow: 0px 5.05331px 8.66281px rgba(0, 0, 0, 0.25);"
+                class="max-w-[221px] w-[50%] h-[46px]  bg-[#FFC71F] text-[14px] font-semibold block  text-[#3B3B3C] rounded-[4px]">Pickup
+                from Restaurant</button>
+              <div style="border-left: 1px solid #C5C5C5;" class="w-[50%] pl-6">
+                <h2 class="text-[20px] text-[#3B3B3C] font-semibold">Restaurant Ali Baba</h2>
+                <p class="text-[16px] text-[#9A9A9A] font-normal">Jyavaskula Seppala</p>
+              </div>
+            </div>
+
+            <!-- status (open or close) and kilometer -->
+            <div class="w-[20%]">
+              <p class="text-[#3B3B3C] flex items-center justify-end  gap-2 text-[16px] font-medium py-1">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 0C4.40926 0.0018906 2.88418 0.664767 1.75935 1.8432C0.634525 3.02164 0.00180459 4.6194 0 6.28596C0 11.6647 5.45455 15.7292 5.68636 15.9006C5.77927 15.9654 5.88839 16 6 16C6.11161 16 6.22073 15.9654 6.31364 15.9006C6.54545 15.7292 12 11.6647 12 6.28596C11.9982 4.6194 11.3655 3.02164 10.2406 1.8432C9.11582 0.664767 7.59075 0.0018906 6 0ZM6 4.00016C6.43152 4.00016 6.85336 4.13422 7.21215 4.38538C7.57095 4.63655 7.8506 4.99354 8.01574 5.41122C8.18087 5.8289 8.22408 6.28849 8.1399 6.7319C8.05571 7.1753 7.84791 7.58259 7.54278 7.90227C7.23765 8.22194 6.84888 8.43964 6.42565 8.52784C6.00242 8.61604 5.56373 8.57077 5.16505 8.39777C4.76638 8.22476 4.42563 7.93178 4.18588 7.55588C3.94614 7.17998 3.81818 6.73805 3.81818 6.28596C3.81818 5.67973 4.04805 5.09832 4.45722 4.66965C4.86639 4.24098 5.42135 4.00016 6 4.00016Z"
+                    fill="#3B3B3C" />
+                </svg>
+                <span>2.5 km</span>
+              </p>
+              <p class="flex justify-end items-center text-[#3B3B3C] text-[16px] font-medium gap-2 ">
+                <span class="w-[8px] h-[8px] rounded-full bg-[#0AF907]"></span>
+                Open
+              </p>
+            </div>
+
+          </div>
+          <!-- product information -->
+          <div>
+            <!-- food name and price -->
+            <div class="flex justify-between items-center border-b pb-4">
+              <div>
+                <h1 class="text-[#3B3B3C] text-[26px] font-medium leading-[39px] py-1">Chicken Chop Suey Chicken</h1>
+                <p class="text-[#9A9A9A] font-medium text-[18px] leading-[27px] py-1">The portion includes rice</p>
+              </div>
+              <!-- price -->
+              <p class="text-[#FE0000] text-[26px] font-medium ">11.50 €</p>
+            </div>
+            <!-- choose a product -->
+            <div class=" my-4">
+              <div class="flex justify-between items-center py-1">
+                <h3 class="text-[22px] font-medium text-[#3B3B3C] leading-[33px]">Choose a product</h3>
+                <p class="text-[#FE0000] text-[18px] font-medium leading-[27px]">1 required</p>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <label class="flex items-center  gap-2 " for="dose">
+                  <input type="checkbox" name="dose" id="dose">
+                  <span class="text-[19px] font-normal text-[#3B3B3C] "> Dose</span>
+                </label>
+                <p class="text-[#9A9A9A] font-medium text-[18px]">11.50 €</p>
+              </div>
+            </div>
+            <!-- third section -->
+            <div>
+              <h2 class="text-[#3B3B3C] text-[22px] font-medium leading-[33px] py-2">
+                Additional Requests
+              </h2>
+              <input style="border: 1px solid #C5C5C5;"
+                class="w-full py-2 indent-3  border text-[#3B3B3C] font-medium text-[15px] leading-[22px]" type="text"
+                placeholder="message">
+            </div>
+            <!-- fourth -->
+            <div class="w-full flex  items-center justify-between my-2">
+              <div class="flex w-[126px] h-[46px] rounded-[5px] border border-[#3B3B3C] my-3 overflow-hidden">
+                <p class="w-[40px] bg-white text-center text-[#3B3B3C] font-medium text-[30px] h-full leading-[45px] ">
+                  1
+                </p>
+                <p
+                  class="bg-[#000] h-full text-[#FBFBFB] text-[30px] font-medium cursor-pointer leading-[45px] w-[43px] text-center">
+                  +
+                </p>
+                <p
+                  class="bg-[#000] cursor-pointer h-full text-[#FBFBFB] text-[30px] font-medium leading-[45px] px-2 w-[43px] text-center">
+                  -</p>
+              </div>
+              <button
+                class="max-w-[608px] w-full h-[46px] rounded-[5px] text-[#FBFBFB] font-medium text-[20px] leading-[30px] bg-[#D9D9D9] ">Add
+                to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
 

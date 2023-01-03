@@ -75,11 +75,16 @@ const menu_displayer = document.getElementById("menu_displayer");
 const modal_1 = document.getElementById("modal_1");
 const modal_2 = document.getElementById("modal_2");
 const modal_3 = document.getElementById("modal_3");
+const modal_4 = document.getElementById("modal_4");
 const body = document.querySelector("body");
 
 function closeModal(event) {
-  console.log(event.target.parentNode.parentNode.parentNode);
-  event.target.parentNode.parentNode.parentNode.style.display = "none";
+  console.log(event.target.tagName);
+  if (event.target.tagName === "IMG") {
+    event.target.parentNode.parentNode.parentNode.style.display = "none";
+  } else {
+    event.target.parentNode.parentNode.style.display = "none";
+  }
   body.style.overflow = "auto";
 }
 function handleModal() {
@@ -88,13 +93,20 @@ function handleModal() {
 }
 function eatAtRestaurent() {
   modal_1.style.display = "none";
-  modal_3.style.display = "flex";
+  modal_2.style.display = "flex";
   body.style.overflow = "hidden";
 }
 function openRestaurent() {
   modal_1.style.display = "none";
+  modal_2.style.display = "none";
+  modal_3.style.display = "flex";
+  body.style.overflow = "hidden";
+}
+function pickUp() {
+  modal_1.style.display = "none";
+  modal_2.style.display = "none";
   modal_3.style.display = "none";
-  modal_2.style.display = "flex";
+  modal_4.style.display = "flex";
   body.style.overflow = "hidden";
 }
 // slider function
