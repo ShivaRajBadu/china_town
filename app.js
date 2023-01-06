@@ -116,18 +116,18 @@ new Splide(".splide", {
 document.addEventListener("DOMContentLoaded", function () {
   new Splide("#image-carousel", {
     pagination: false,
-    perPage: 3,
+    perPage: 1,
     gap: "0.8rem",
-    breakPoint: {
-      1220: {
-        perPage: 2,
-      },
-      1080: {},
-    },
+    // breakPoint: {
+    //   1220: {
+    //     perPage: 2,
+    //   },
+    //   1080: {},
+    // },
   }).mount();
   new Splide("#image-carousel_2", {
     pagination: false,
-    perPage: 2,
+    // perPage: 2,
     gap: "2.4rem",
   }).mount();
 });
