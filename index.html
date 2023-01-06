@@ -175,14 +175,15 @@
     transform: scale(1);
   }
 
+
   .menu_underline::after {
     content: ' ';
     position: absolute;
-    width: 80%;
+    width: 120%;
     height: 6px;
     background: #FFA228;
-    bottom: -8px;
-    left: 10%;
+    bottom: -9px;
+    left: -9%;
 
   }
 
@@ -227,6 +228,18 @@
       width: 2px;
       height: 40%;
       background: #CFCFCF;
+    }
+
+    /* menu underline */
+    .menu_underline::after {
+      content: ' ';
+      position: absolute;
+      width: 80%;
+      height: 6px;
+      background: #FFA228;
+      bottom: -8px;
+      left: 10%;
+
     }
 
     /* most popular arrow custom */
@@ -526,39 +539,55 @@
 
 
         <div id="menu"
-          class="flex hide_scroll  h-[155px] overflow-x-scroll justify-between my-6 whitespace-nowrap relative gap-8 w-full">
-          <div class="min-w-[132px]    mx-5 cursor-pointer text-center">
-            <img class="w-full h-[80%] object-contain" src="./src/assets/menu_1.png" alt="">
-            <h4 class="text-[14px] menu_underline font-medium relative  ">
+          class="flex hide_scroll  h-[155px] overflow-x-scroll justify-between my-6 whitespace-nowrap relative gap-4 md:gap-8 w-full">
+          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
+            <div class="w-full h-[80px]">
+              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_1.png" alt="">
+            </div>
+
+            <h4 class="text-[14px] text-center  menu_underline font-medium relative  ">
               Appetizer</h4>
           </div>
-          <div class="min-w-[132px] h-full  mx-5 cursor-pointer text-center">
-            <img class="w-full h-[80%] object-contain" src="./src/assets/menu_2.png" alt="">
-            <h4 class="text-[14px] font-medium ">Sushi</h4>
-          </div>
-          <div class="min-w-[132px]  mx-5 cursor-pointer text-center">
-            <img class="w-full h-[80%] object-contain" src="./src/assets/menu_3.png" alt="">
-            <h4 class="text-[14px] font-medium ">Prawns</h4>
-          </div>
-          <div class="min-w-[132px]  mx-5 cursor-pointer text-center">
-            <img class="w-full h-[80%] object-contain" src="./src/assets/menu_4.png" alt="">
-            <h4 class="text-[14px] font-medium ">Octopus & Shrimp</h4>
-          </div>
-          <div class="min-w-[132px]  mx-5 cursor-pointer text-center">
-            <img class="w-full h-[80%] object-contain" src="./src/assets/menu_5.png" alt="">
-            <h4 class="text-[14px] font-medium ">Chicken</h4>
-          </div>
-          <div class="min-w-[132px]  mx-5 cursor-pointer text-center">
-            <img class="w-full h-[80%] object-contain" src="./src/assets/menu_5.png" alt="">
-            <h4 class="text-[14px] font-medium ">Chicken</h4>
-          </div>
-          <div class="min-w-[132px]  mx-5 cursor-pointer text-center">
-            <img class="w-full h-[80%] object-contain" src="./src/assets/menu_5.png" alt="">
-            <h4 class="text-[14px] font-medium ">Chicken</h4>
-          </div>
+          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
+            <div class="w-full h-[80px]">
+              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_2.png" alt="">
+            </div>
 
+            <h4 class="text-[14px] text-center   font-medium relative  ">
+              Sushi</h4>
+          </div>
+          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
+            <div class="w-full h-[80px]">
+              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_3.png" alt="">
+            </div>
 
+            <h4 class="text-[14px] text-center   font-medium relative  ">
+              Prawns</h4>
+          </div>
+          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
+            <div class="w-full h-[80px]">
+              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_5.png" alt="">
+            </div>
 
+            <h4 class="text-[14px]  text-center   font-medium relative  ">
+              Chicken</h4>
+          </div>
+          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
+            <div class="w-full h-[80px]">
+              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_4.png" alt="">
+            </div>
+
+            <h4 class="text-[14px]  text-center   font-medium relative  ">
+              Octopus & Shrimp</h4>
+          </div>
+          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
+            <div class="w-full h-[80px]">
+              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_4.png" alt="">
+            </div>
+
+            <h4 class="text-[14px]  text-center   font-medium relative  ">
+              Octopus & Shrimp</h4>
+          </div>
 
         </div>
         <button id="menu_prev" class="absolute -left-2  top-[50%]">
@@ -889,7 +918,7 @@
           <div class="flex-1   px-6 md:px-0">
             <p class="text-[16px] font-bold tracking-[0.04em] capitalize text-white leading-[130%] pt-3">Chef’s Word</p>
             <h1
-              class="text-[29px] md:text-[35px] lg:text-[44px] font-semibold text-[#FFA228] tracking-[0.03em] capitalize my-3 py-2 mb-4 lg:mb-8 leading-[175%]">
+              class="text-[26px] xs:text-[29px] md:text-[35px] lg:text-[44px] font-semibold text-[#FFA228] tracking-[0.03em] capitalize my-3 py-2 mb-4 lg:mb-8 leading-[175%]">
               What we
               believe in
             </h1>
