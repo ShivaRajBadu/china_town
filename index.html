@@ -219,28 +219,46 @@
     background: #CFCFCF;
   }
 
+  /* menu underline */
+  .menu_underline::after {
+    content: ' ';
+    position: absolute;
+    width: 80%;
+    height: 6px;
+    background: #FFA228;
+    bottom: -8px;
+    left: 10%;
+
+  }
+
+  /* menu items underline */
+  .menu_item_underline::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 3px;
+    background-color: #FCF1E7;
+    bottom: 34px;
+  }
+
+
   @media (min-width:768px) {
     .after_line::after {
-      content: ' ';
-      position: absolute;
+
       top: 30%;
       right: 0;
       width: 2px;
       height: 40%;
-      background: #CFCFCF;
-    }
-
-    /* menu underline */
-    .menu_underline::after {
-      content: ' ';
-      position: absolute;
-      width: 80%;
-      height: 6px;
-      background: #FFA228;
-      bottom: -8px;
-      left: 10%;
 
     }
+
+    .menu_item_underline::after {
+
+      bottom: 49px;
+    }
+
+
 
     /* most popular arrow custom */
     .popular .splide__arrow--prev {
@@ -290,6 +308,15 @@
   .reverse>img:last-child {
     display: block !important;
   }
+
+  @media (max-width:500px) {
+
+    #menu>*,
+    #menu_displayer>* {
+
+      cursor: none !important;
+    }
+  }
 </style>
 
 <body>
@@ -337,6 +364,7 @@
     </header>
   </div>
   <main class="font-['Poppins'] ">
+
     <div class="max-w-[1200px] mx-auto px-4 md:px-5 ">
       <!-- hero section -->
       <div class="splide  mx-auto" role="group" aria-label="Splide Basic HTML Example">
@@ -361,10 +389,11 @@
                     or <span class="font-bold">our app</span> .
                   </p>
                   <button style="box-shadow: 0px 5.62917px 9.65px rgba(0, 0, 0, 0.25);"
-                    class="border-2 border-[#fff] font-['Poppins'] hover:bg-[#c7170a] font-semibold  text-[9px] sm:text-[14px] md:text-[16px] text-white px-8 py-2 rounded-[26px] bg-[#F53627]  text-center mt-1  md:mt-8 ">Order
+                    class="border-2 border-[#fff] font-['Poppins'] hover:bg-[#c7170a] font-semibold  text-[9px] sm:text-[14px] md:text-[16px] text-white px-6 sm:px-8 py-1 sm:py-2 rounded-[26px] bg-[#F53627]  text-center mt-1  md:mt-8 ">Order
                     Now</button>
                 </div>
-                <div class="max-w-[110px] sm:max-w-[250px]  md:max-h-[262px]  md:max-w-[300px] lg:max-w-[490px]  ">
+                <div
+                  class="max-w-[110px] xs:max-w-[130px] flex-1 sm:max-w-[250px]    md:max-w-[300px] lg:max-w-[490px]  ">
                   <img class="w-full h-auto object-cover object-center" src="./src/assets/home_pic_1.png" alt="">
                 </div>
               </div>
@@ -425,8 +454,9 @@
                     class="border-2 border-[#fff] font-['Poppins'] font-semibold text-[9px] sm:text-[14px] md:text-[16px] text-white px-8 py-2 rounded-[26px] bg-[#FFA228]  text-center mt-1 md:mt-8 hover:bg-[#de891a]">Order
                     Now</button>
                 </div>
-                <div class="max-w-[110px] sm:max-w-[250px]  md:max-h-[262px]  md:max-w-[300px] lg:max-w-[490px] z-[1] ">
-                  <img class="w-full h-auto object-cover object-center" src="./src/assets/home_pic_3.png" alt="">
+                <div
+                  class="max-w-[110px] xs:max-w-[130px] flex-1 sm:max-w-[250px]   md:max-w-[300px] lg:max-w-[490px] z-[1]  ">
+                  <img class="w-full h-auto object-cover object-top" src="./src/assets/home_pic_3.png" alt="">
                 </div>
               </div>
             </li>
@@ -485,7 +515,8 @@
                     class="border-2 border-[#fff] font-['Poppins'] font-semibold text-[9px] sm:text-[14px] md:text-[16px] text-white px-8 py-2 rounded-[26px] bg-[#00863A]  text-center mt-1 md:mt-8 hover:bg-[#03b650]">Order
                     Now</button>
                 </div>
-                <div class="max-w-[110px] sm:max-w-[250px]  md:max-h-[262px]  md:max-w-[300px] lg:max-w-[490px]  z-[1]">
+                <div
+                  class="max-w-[110px] xs:max-w-[130px] flex-1 sm:max-w-[250px]    md:max-w-[300px] lg:max-w-[490px]  z-[1]">
                   <img class="w-full h-auto object-cover object-center" src="./src/assets/home_pic_2.png" alt="">
                 </div>
               </div>
@@ -528,176 +559,378 @@
 
         </div>
       </section>
-      <!-- menu section -->
-      <!-- <section class="py-6  px-8 relative">
 
-        <h1 style="box-shadow: 1.19136px 2.38272px 7.14815px rgba(255, 199, 31, 0.25); width: max-content;"
-          class=" relative left-[45%] text-white text-[24px] font-['Poppins'] font-bold bg-[#FFA228] px-6 py-[0.1rem] rounded-[19px] content text-center ">
-          Our
-          Menu
-        </h1>
+      <!-- menu section -->
+      <section class="pt-6  px-6 relative">
+
+        <div class="w-full text-center">
+          <h1 style="box-shadow: 1.19136px 2.38272px 7.14815px rgba(255, 199, 31, 0.25); width: max-content;"
+            class=" mx-auto text-center text-white text-[19px] md:text-[24px] font-['Poppins'] font-bold bg-[#FFA228] px-6 py-[0.1rem] rounded-[19px] content text-center ">
+            Our
+            Menu
+          </h1>
+        </div>
+
 
 
         <div id="menu"
-          class="flex hide_scroll  h-[155px] overflow-x-scroll justify-between my-6 whitespace-nowrap relative gap-4 md:gap-8 w-full">
-          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
-            <div class="w-full h-[80px]">
-              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_1.png" alt="">
+          class="flex hide_scroll py-6 overflow-x-scroll justify-between my-6 whitespace-nowrap relative gap-8 sm:gap-10 md:gap-8 lg:gap-14 w-full items-start">
+          <!-- <div class="cursor-pointer text-center ">
+            <div class="w-[64px] h-[56px] md:w-[132px] md:h-[113px]">
+              <img class="max-w-full h-auto" src="./src/assets/menu_4.png" alt="">
+            </div>
+            <h4 class="text-[10px] md:text-[14px] text-center  menu_underline font-medium relative  ">
+              Appetizer
+            </h4>
+          </div> -->
+          <div class=" cursor-pointer text-center">
+            <div class="w-[64px] h-[56px] sm:w-[94px] sm:h-[84px] md:w-[132px] md:h-[113px] mx-auto">
+              <img class="max-w-full  h-auto" src="./src/assets/menu_1.png" alt="">
             </div>
 
-            <h4 class="text-[14px] text-center  menu_underline font-medium relative  ">
+            <h4 class="text-[10px] sm:text-[12px] md:text-[14px] text-center  menu_underline font-medium relative  ">
               Appetizer</h4>
           </div>
-          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
-            <div class="w-full h-[80px]">
-              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_2.png" alt="">
+          <div class=" cursor-pointer text-center">
+            <div class="w-[64px] h-[56px] sm:w-[94px] sm:h-[84px] md:w-[132px] md:h-[113px] mx-auto">
+              <img class="max-w-full   object-cover" src="./src/assets/menu_2.png" alt="">
             </div>
 
-            <h4 class="text-[14px] text-center   font-medium relative  ">
+            <h4 class="text-[10px] sm:text-[12px] md:text-[14px] text-center   font-medium relative  ">
               Sushi</h4>
           </div>
-          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
-            <div class="w-full h-[80px]">
-              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_3.png" alt="">
+
+          <div class=" cursor-pointer text-center">
+            <div class="w-[64px] h-[56px] sm:w-[94px] sm:h-[84px] md:w-[132px] md:h-[113px] mx-auto">
+              <img class="max-w-full   object-cover" src="./src/assets/menu_3.png" alt="">
             </div>
 
-            <h4 class="text-[14px] text-center   font-medium relative  ">
+            <h4 class="text-[10px] sm:text-[12px] md:text-[14px] text-center   font-medium relative  ">
               Prawns</h4>
           </div>
-          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
-            <div class="w-full h-[80px]">
-              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_5.png" alt="">
+          <div class="cursor-pointer text-center">
+            <div class="w-[64px] h-[56px] sm:w-[94px] sm:h-[84px] md:w-[132px] md:h-[113px] mx-auto">
+              <img class="max-w-full   object-cover" src="./src/assets/menu_5.png" alt="">
             </div>
 
-            <h4 class="text-[14px]  text-center   font-medium relative  ">
+            <h4 class="text-[10px] sm:text-[12px] md:text-[14px]  text-center   font-medium relative  ">
               Chicken</h4>
           </div>
-          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
-            <div class="w-full h-[80px]">
-              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_4.png" alt="">
+          <div class=" cursor-pointer text-center">
+            <div class="w-[64px] h-[56px] sm:w-[94px] sm:h-[84px] md:w-[132px] md:h-[113px] mx-auto">
+              <img class="max-w-full   object-cover" src="./src/assets/menu_3.png" alt="">
             </div>
 
-            <h4 class="text-[14px]  text-center   font-medium relative  ">
+            <h4 class="text-[10px] sm:text-[12px] md:text-[14px] text-center   font-medium relative  ">
+              Prawns</h4>
+          </div>
+
+          <div class=" cursor-pointer text-center">
+            <div class="w-[64px] h-[56px] sm:w-[94px] sm:h-[84px] md:w-[132px] md:h-[113px] mx-auto">
+              <img class="max-w-full   object-cover" src="./src/assets/menu_4.png" alt="">
+            </div>
+
+            <h4 class="text-[10px] sm:text-[12px] md:text-[14px]  text-center   font-medium relative  ">
               Octopus & Shrimp</h4>
           </div>
-          <div class="min-w-[84px] w-[74px] sm:min-w-[100px] md:min-w-[132px]    mx-5 cursor-pointer text-center">
-            <div class="w-full h-[80px]">
-              <img class="max-w-full  max-h-full object-cover" src="./src/assets/menu_4.png" alt="">
+          <div class=" cursor-pointer text-center">
+            <div class="w-[64px] h-[56px] sm:w-[94px] sm:h-[84px] md:w-[132px] md:h-[113px] mx-auto">
+              <img class="max-w-full   object-cover" src="./src/assets/menu_2.png" alt="">
             </div>
 
-            <h4 class="text-[14px]  text-center   font-medium relative  ">
+            <h4 class="text-[10px] sm:text-[12px] md:text-[14px] text-center   font-medium relative  ">
+              Sushi</h4>
+          </div>
+          <div class=" cursor-pointer text-center">
+            <div class="w-[64px] h-[56px] sm:w-[94px] sm:h-[84px] md:w-[132px] md:h-[113px] mx-a">
+              <img class="max-w-full   object-cover" src="./src/assets/menu_4.png" alt="">
+            </div>
+
+            <h4 class="text-[10px] sm:text-[12px] md:text-[14px]  text-center   font-medium relative  ">
               Octopus & Shrimp</h4>
           </div>
 
         </div>
-        <button id="menu_prev" class="absolute -left-2  top-[50%]">
-          <img class="rotate-[180deg]" src="./src/assets/right_icon.png" alt="">
+        <button id="menu_prev" class="absolute -left-1 md:-left-3  top-[60%] ">
+          <img class="rotate-[180deg] w-[25px] h-[25px] md:w-[30px] md:h-[30px]" src="./src/assets/right_icon.png"
+            alt="">
         </button>
-        <button id="menu_next" class="absolute -right-2 top-[50%] ">
-          <img src="./src/assets/right_icon.png" alt="">
+        <button id="menu_next" class="absolute -right-1 md:-right-3 top-[60%]  ">
+          <img class="w-[25px] h-[25px] md:w-[30px] md:h-[30px]" src="./src/assets/right_icon.png" alt="">
         </button>
-
-      </section> -->
-      <!-- menu displayer -->
-
-      <!-- most popular section -->
-      <section class="font-['Poppins'] w-[97%] mx-auto ">
-        <h1 class="text-[30px] font-bold px-3  py-2 my-4">Most Popular</h1>
-
-        <section id="image-carousel" class="splide px-2 " aria-label="Beautiful Images">
-          <div class="splide__arrows popular  splide__arrows--ltr">
-            <button class="splide__arrow splide__arrow--prev !text-white !bg-transparent  " type="button"
-              aria-label="Previous slide" aria-controls="splide01-track">
-              <svg class="!w-[18px] !h-[18px]  md:!w-[31px] md:!h-[31px] " viewBox="0 0 45 45" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M22.5 31.5L31.5 22.5L22.5 13.5L19.35 16.65L22.95 20.25L13.5 20.25V24.75L22.95 24.75L19.35 28.35L22.5 31.5ZM22.5 45C19.3875 45 16.4625 44.409 13.725 43.227C10.9875 42.0465 8.60625 40.4438 6.58125 38.4188C4.55625 36.3938 2.9535 34.0125 1.773 31.275C0.591 28.5375 0 25.6125 0 22.5C0 19.3875 0.591 16.4625 1.773 13.725C2.9535 10.9875 4.55625 8.60625 6.58125 6.58125C8.60625 4.55625 10.9875 2.95275 13.725 1.77075C16.4625 0.59025 19.3875 0 22.5 0C25.6125 0 28.5375 0.59025 31.275 1.77075C34.0125 2.95275 36.3938 4.55625 38.4188 6.58125C40.4438 8.60625 42.0465 10.9875 43.227 13.725C44.409 16.4625 45 19.3875 45 22.5C45 25.6125 44.409 28.5375 43.227 31.275C42.0465 34.0125 40.4438 36.3938 38.4188 38.4188C36.3938 40.4438 34.0125 42.0465 31.275 43.227C28.5375 44.409 25.6125 45 22.5 45ZM22.5 40.5C27.525 40.5 31.7813 38.7562 35.2688 35.2687C38.7563 31.7812 40.5 27.525 40.5 22.5C40.5 17.475 38.7563 13.2188 35.2688 9.73125C31.7813 6.24375 27.525 4.5 22.5 4.5C17.475 4.5 13.2188 6.24375 9.73125 9.73125C6.24375 13.2188 4.5 17.475 4.5 22.5C4.5 27.525 6.24375 31.7812 9.73125 35.2687C13.2188 38.7562 17.475 40.5 22.5 40.5Z"
-                  fill="#FFA228" />
-              </svg>
-            </button>
-            <button class="splide__arrow popular splide__arrow--next !text-white !bg-transparent" type="button"
-              aria-label="Next slide" aria-controls="splide01-track">
-              <svg class="!w-[18px] !h-[18px] md:!w-[31px] md:!h-[31px] " viewBox="0 0 45 45" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M22.5 31.5L31.5 22.5L22.5 13.5L19.35 16.65L22.95 20.25L13.5 20.25V24.75L22.95 24.75L19.35 28.35L22.5 31.5ZM22.5 45C19.3875 45 16.4625 44.409 13.725 43.227C10.9875 42.0465 8.60625 40.4438 6.58125 38.4188C4.55625 36.3938 2.9535 34.0125 1.773 31.275C0.591 28.5375 0 25.6125 0 22.5C0 19.3875 0.591 16.4625 1.773 13.725C2.9535 10.9875 4.55625 8.60625 6.58125 6.58125C8.60625 4.55625 10.9875 2.95275 13.725 1.77075C16.4625 0.59025 19.3875 0 22.5 0C25.6125 0 28.5375 0.59025 31.275 1.77075C34.0125 2.95275 36.3938 4.55625 38.4188 6.58125C40.4438 8.60625 42.0465 10.9875 43.227 13.725C44.409 16.4625 45 19.3875 45 22.5C45 25.6125 44.409 28.5375 43.227 31.275C42.0465 34.0125 40.4438 36.3938 38.4188 38.4188C36.3938 40.4438 34.0125 42.0465 31.275 43.227C28.5375 44.409 25.6125 45 22.5 45ZM22.5 40.5C27.525 40.5 31.7813 38.7562 35.2688 35.2687C38.7563 31.7812 40.5 27.525 40.5 22.5C40.5 17.475 38.7563 13.2188 35.2688 9.73125C31.7813 6.24375 27.525 4.5 22.5 4.5C17.475 4.5 13.2188 6.24375 9.73125 9.73125C6.24375 13.2188 4.5 17.475 4.5 22.5C4.5 27.525 6.24375 31.7812 9.73125 35.2687C13.2188 38.7562 17.475 40.5 22.5 40.5Z"
-                  fill="#FFA228" />
-              </svg>
-            </button>
-          </div>
-          <div style="background: linear-gradient(242.99deg, #F8E7DD -3.29%, #FFFAF0 118.42%) !important;"
-            class="splide__track !py-6">
-            <ul class="splide__list ">
-              <li class="splide__slide !w-[192px]   min-[480px]:!w-[230px]  sm:!w-[250px]  md:!w-[377px] md:!h-[189px]">
-                <img class="w-full h-full object-contain" src="./src/assets/popular_1.svg" alt="">
-              </li>
-              <li
-                class="splide__slide !w-[192px] !h-[96px] min-[480px]:!w-[230px] min-[480px]:!h-[105px] md:!w-[377px] md:!h-[189px]">
-                <img class="w-full h-full" src="./src/assets/popular_2.svg" alt="">
-              </li>
-              <li
-                class="splide__slide !w-[192px] !h-[96px] min-[480px]:!w-[230px] min-[480px]:!h-[105px] md:!w-[377px] md:!h-[189px]">
-                <img class="w-full h-full" src="./src/assets/popular_3.svg" alt="">
-              </li>
-              <li
-                class="splide__slide !w-[192px] !h-[96px] min-[480px]:!w-[230px] min-[480px]:!h-[105px] md:!w-[377px] md:!h-[189px]">
-                <img class="w-full h-full" src="./src/assets/popular_3.svg" alt="">
-              </li>
-
-            </ul>
-          </div>
-        </section>
-        <section id="image-carousel_2" class="splide px-2 ml-1" aria-label="Beautiful Images">
-          <div class="splide__arrows popular  splide__arrows--ltr">
-            <button class="splide__arrow splide__arrow--prev !text-white !bg-transparent  " type="button"
-              aria-label="Previous slide" aria-controls="splide01-track">
-              <svg class="!w-[18px] !h-[18px]  md:!w-[31px] md:!h-[31px] " viewBox="0 0 45 45" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M22.5 31.5L31.5 22.5L22.5 13.5L19.35 16.65L22.95 20.25L13.5 20.25V24.75L22.95 24.75L19.35 28.35L22.5 31.5ZM22.5 45C19.3875 45 16.4625 44.409 13.725 43.227C10.9875 42.0465 8.60625 40.4438 6.58125 38.4188C4.55625 36.3938 2.9535 34.0125 1.773 31.275C0.591 28.5375 0 25.6125 0 22.5C0 19.3875 0.591 16.4625 1.773 13.725C2.9535 10.9875 4.55625 8.60625 6.58125 6.58125C8.60625 4.55625 10.9875 2.95275 13.725 1.77075C16.4625 0.59025 19.3875 0 22.5 0C25.6125 0 28.5375 0.59025 31.275 1.77075C34.0125 2.95275 36.3938 4.55625 38.4188 6.58125C40.4438 8.60625 42.0465 10.9875 43.227 13.725C44.409 16.4625 45 19.3875 45 22.5C45 25.6125 44.409 28.5375 43.227 31.275C42.0465 34.0125 40.4438 36.3938 38.4188 38.4188C36.3938 40.4438 34.0125 42.0465 31.275 43.227C28.5375 44.409 25.6125 45 22.5 45ZM22.5 40.5C27.525 40.5 31.7813 38.7562 35.2688 35.2687C38.7563 31.7812 40.5 27.525 40.5 22.5C40.5 17.475 38.7563 13.2188 35.2688 9.73125C31.7813 6.24375 27.525 4.5 22.5 4.5C17.475 4.5 13.2188 6.24375 9.73125 9.73125C6.24375 13.2188 4.5 17.475 4.5 22.5C4.5 27.525 6.24375 31.7812 9.73125 35.2687C13.2188 38.7562 17.475 40.5 22.5 40.5Z"
-                  fill="#FFA228" />
-              </svg>
-            </button>
-            <button class="splide__arrow popular splide__arrow--next !text-white !bg-transparent" type="button"
-              aria-label="Next slide" aria-controls="splide01-track">
-              <svg class="!w-[18px] !h-[18px] md:!w-[31px] md:!h-[31px] " viewBox="0 0 45 45" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M22.5 31.5L31.5 22.5L22.5 13.5L19.35 16.65L22.95 20.25L13.5 20.25V24.75L22.95 24.75L19.35 28.35L22.5 31.5ZM22.5 45C19.3875 45 16.4625 44.409 13.725 43.227C10.9875 42.0465 8.60625 40.4438 6.58125 38.4188C4.55625 36.3938 2.9535 34.0125 1.773 31.275C0.591 28.5375 0 25.6125 0 22.5C0 19.3875 0.591 16.4625 1.773 13.725C2.9535 10.9875 4.55625 8.60625 6.58125 6.58125C8.60625 4.55625 10.9875 2.95275 13.725 1.77075C16.4625 0.59025 19.3875 0 22.5 0C25.6125 0 28.5375 0.59025 31.275 1.77075C34.0125 2.95275 36.3938 4.55625 38.4188 6.58125C40.4438 8.60625 42.0465 10.9875 43.227 13.725C44.409 16.4625 45 19.3875 45 22.5C45 25.6125 44.409 28.5375 43.227 31.275C42.0465 34.0125 40.4438 36.3938 38.4188 38.4188C36.3938 40.4438 34.0125 42.0465 31.275 43.227C28.5375 44.409 25.6125 45 22.5 45ZM22.5 40.5C27.525 40.5 31.7813 38.7562 35.2688 35.2687C38.7563 31.7812 40.5 27.525 40.5 22.5C40.5 17.475 38.7563 13.2188 35.2688 9.73125C31.7813 6.24375 27.525 4.5 22.5 4.5C17.475 4.5 13.2188 6.24375 9.73125 9.73125C6.24375 13.2188 4.5 17.475 4.5 22.5C4.5 27.525 6.24375 31.7812 9.73125 35.2687C13.2188 38.7562 17.475 40.5 22.5 40.5Z"
-                  fill="#FFA228" />
-              </svg>
-            </button>
-          </div>
-          <div class=" splide__track !py-6 bg-[#B2FFD2]">
-            <ul class="splide__list ">
-              <li class="splide__slide !w-[260px] !h-[96px]   md:!w-[560px] md:!h-[205px] !mr-[1rem]">
-                <img class="w-full h-full object-contain" src="./src/assets/popular_7.svg" alt="">
-              </li>
-
-              <li class="splide__slide !w-[260px] !h-[96px]   md:!w-[560px] md:!h-[205px] !mr-[1rem]">
-                <img class="w-full h-full" src="./src/assets/popular_8.svg" alt="">
-              </li>
-              <li class="splide__slide !w-[260px] !h-[96px]   md:!w-[560px] md:!h-[205px] !mr-[1rem]">
-                <img class="w-full h-full object-contain" src="./src/assets/popular_7.svg" alt="">
-              </li>
-
-              <li class="splide__slide !w-[260px] !h-[96px]   md:!w-[560px] md:!h-[205px] !mr-[1rem]">
-                <img class="w-full h-full" src="./src/assets/popular_8.svg" alt="">
-              </li>
-
-
-            </ul>
-          </div>
-        </section>
-
 
       </section>
-      <!-- download button -->
-      <div class="text-center my-6 py-2">
-        <button
-          class="w-[259px] md:w-[300px] rounded-[5px] font-sans bg-[#F73D27] text-white text-[19px] md:text-[25px] font-bold h-[45px] md:h-[55px] hover:bg-[#c32f1f] hover:scale-[1.03] flex justify-center items-center mx-auto shadow-sm duration-500">Download
-          Our App</button>
+      <!-- menu displayer -->
+      <div id="menu_displayer" "
+        class=" menu_displayer h-[350px] w-full grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 my-4
+        gap-6 py-4 overflow-x-hidden overflow-y-scroll ">
+        <div
+          class=" w-[106px] md:w-[178px] text-center relative menu_item_underline">
+        <!-- icons -->
+        <span onclick=' this.classList.toggle("change")'
+          class="absolute block -top-2 w-[22px]  h-[22px] cursor-pointer  right-0">
+          <img class="hidden" src="./src/assets/icon.svg" alt="">
+          <img src="./src/assets/tick.svg" alt="">
+        </span>
+        <div onclick="handleModal()" class="cursor-pointer">
+          <!-- image -->
+          <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto  ">
+            <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
+          </div>
+          <!-- food name -->
+          <h3
+            class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center  py-1 mx-auto px-2 md:px-5 line_clamp">
+            Egg Vegetable
+            Soup Appetizer</h3>
+        </div>
+
       </div>
+      <div class="w-[106px] md:w-[178px] cursor-pointer  text-center  relative menu_item_underline">
+        <!-- icons -->
+        <span onclick=' this.classList.toggle("change")'
+          class="absolute block -top-2 w-[22px]  h-[22px] cursor-pointer  right-0">
+          <img class="hidden" src="./src/assets/icon.svg" alt="">
+          <img src="./src/assets/tick.svg" alt="">
+        </span>
+        <!-- image -->
+        <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto ">
+          <img class="w-full h-full object-cover" src="./src/assets/menu_3.png" alt="">
+        </div>
+        <!-- food name -->
+        <h3
+          class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center py-1 mx-auto px-2 md:px-5 line_clamp">
+          Egg Vegetable
+          Soup Appetizer</h3>
+      </div>
+      <div class="w-[106px] md:w-[178px] cursor-pointer  text-center  relative menu_item_underline">
+        <!-- icons -->
+        <span onclick="this.classList.toggle('reverse')" class="absolute -top-2  cursor-pointer  right-0">
+          <img src="./src/assets/icon.svg" alt="">
+          <img class="hidden" src="./src/assets/tick.svg" alt="">
+        </span>
+        <!-- image -->
+        <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto ">
+          <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
+        </div>
+        <!-- food name -->
+        <h3
+          class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center py-1 mx-auto px-2 md:px-5 line_clamp">
+          Chicken Corn
+          Soup Appetizer</h3>
+      </div>
+      <div class="w-[106px] md:w-[178px] cursor-pointer  text-center  relative menu_item_underline">
+        <!-- icons -->
+        <span onclick="this.classList.toggle('change')" class="absolute -top-2  cursor-pointer  right-0">
+          <img class="hidden" src="./src/assets/icon.svg" alt="">
+          <img src="./src/assets/tick.svg" alt="">
+        </span>
+        <!-- image -->
+        <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto ">
+          <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
+        </div>
+        <!-- food name -->
+        <h3
+          class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center py-1 mx-auto px-2 md:px-5  line_clamp">
+          Chinese Mushroom
+          Chicken
+          Soup Appetizer</h3>
+      </div>
+      <div class="w-[106px] md:w-[178px] cursor-pointer  text-center  relative menu_item_underline">
+        <!-- icons -->
+        <span onclick="this.classList.toggle('reverse')" class="absolute -top-2  cursor-pointer  right-0">
+          <img src="./src/assets/icon.svg" alt="">
+          <img class="hidden" src="./src/assets/tick.svg" alt="">
+        </span>
+        <!-- image -->
+        <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto ">
+          <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
+        </div>
+        <!-- food name -->
+        <h3
+          class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center py-1 mx-auto px-2 md:px-5 line_clamp">
+          Chicken Corn
+          Soup Appetizer</h3>
+      </div>
+      <div class="w-[106px] md:w-[178px]  cursor-pointer text-center  relative menu_item_underline">
+        <!-- icons -->
+        <span onclick="this.classList.toggle('reverse')" class="absolute -top-2  cursor-pointer  right-0">
+          <img src="./src/assets/icon.svg" alt="">
+          <img class="hidden" src="./src/assets/tick.svg" alt="">
+        </span>
+        <!-- image -->
+        <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto ">
+          <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
+        </div>
+        <!-- food name -->
+        <h3
+          class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center py-1 mx-auto px-2 md:px-5 line_clamp">
+          Seafood
+          Soup Appetizer</h3>
+      </div>
+      <div class="w-[106px] md:w-[178px] cursor-pointer  text-center  relative menu_item_underline">
+        <!-- icons -->
+        <span onclick="this.classList.toggle('change')" class="absolute -top-2  cursor-pointer  right-0">
+          <img class="hidden" src="./src/assets/icon.svg" alt="">
+          <img src="./src/assets/tick.svg" alt="">
+        </span>
+        <!-- image -->
+        <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto ">
+          <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
+        </div>
+        <!-- food name -->
+        <h3
+          class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center py-1 mx-auto px-2 md:px-5 line_clamp">
+          Shrimp
+          Vegetable
+          Soup Appetizer</h3>
+      </div>
+      <div class="w-[106px] md:w-[178px] cursor-pointer  text-center  relative menu_item_underline">
+        <!-- icons -->
+        <span onclick="this.classList.toggle('reverse')" class="absolute -top-2  cursor-pointer  right-0">
+          <img src="./src/assets/icon.svg" alt="">
+          <img class="hidden" src="./src/assets/tick.svg" alt="">
+        </span>
+        <!-- image -->
+        <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto ">
+          <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
+        </div>
+        <!-- food name -->
+        <h3
+          class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center py-1 mx-auto px-2 md:px-5 line_clamp">
+          Crab Tofu
+          Soup Appetizer</h3>
+      </div>
+      <div class="w-[106px] md:w-[178px] cursor-pointer  text-center  relative menu_item_underline">
+        <!-- icons -->
+        <span onclick="this.classList.toggle('change')" class="absolute -top-2  cursor-pointer  right-0">
+          <img class="hidden" src="./src/assets/icon.svg" alt="">
+          <img src="./src/assets/tick.svg" alt="">
+        </span>
+        <!-- image -->
+        <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto ">
+          <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
+        </div>
+        <!-- food name -->
+        <h3
+          class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center py-1 mx-auto px-2 md:px-5 line_clamp">
+          Beijing
+          Soup Appetizer</h3>
+      </div>
+      <div class="w-[106px] md:w-[178px] cursor-pointer  text-center  relative menu_item_underline">
+        <!-- icons -->
+        <span onclick="this.classList.toggle('reverse')" class="absolute -top-2  cursor-pointer  right-0">
+          <img src="./src/assets/icon.svg" alt="">
+          <img class="hidden" src="./src/assets/tick.svg" alt="">
+        </span>
+        <!-- image -->
+        <div class="w-[84px] h-[67px]  md:w-[127px] md:h-[101px] mx-auto ">
+          <img class="w-full h-full object-cover" src="./src/assets/menu_6.png" alt="">
+        </div>
+        <!-- food name -->
+        <h3
+          class="font-['Poppins'] text-[9px] md:text-[14px] font-medium  text-center py-1 mx-auto px-2 md:px-5 line_clamp">
+          Spring Roll
+          Appetizer</h3>
+      </div>
+    </div>
+    <!-- most popular section -->
+    <section class="font-['Poppins'] w-[97%] mx-auto ">
+      <h1 class="text-[30px] font-bold px-3  py-2 my-4">Most Popular</h1>
+
+      <section id="image-carousel" class="splide px-2 " aria-label="Beautiful Images">
+        <div class="splide__arrows popular  splide__arrows--ltr">
+          <button class="splide__arrow splide__arrow--prev !text-white !bg-transparent  " type="button"
+            aria-label="Previous slide" aria-controls="splide01-track">
+            <svg class="!w-[18px] !h-[18px]  md:!w-[31px] md:!h-[31px] " viewBox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 31.5L31.5 22.5L22.5 13.5L19.35 16.65L22.95 20.25L13.5 20.25V24.75L22.95 24.75L19.35 28.35L22.5 31.5ZM22.5 45C19.3875 45 16.4625 44.409 13.725 43.227C10.9875 42.0465 8.60625 40.4438 6.58125 38.4188C4.55625 36.3938 2.9535 34.0125 1.773 31.275C0.591 28.5375 0 25.6125 0 22.5C0 19.3875 0.591 16.4625 1.773 13.725C2.9535 10.9875 4.55625 8.60625 6.58125 6.58125C8.60625 4.55625 10.9875 2.95275 13.725 1.77075C16.4625 0.59025 19.3875 0 22.5 0C25.6125 0 28.5375 0.59025 31.275 1.77075C34.0125 2.95275 36.3938 4.55625 38.4188 6.58125C40.4438 8.60625 42.0465 10.9875 43.227 13.725C44.409 16.4625 45 19.3875 45 22.5C45 25.6125 44.409 28.5375 43.227 31.275C42.0465 34.0125 40.4438 36.3938 38.4188 38.4188C36.3938 40.4438 34.0125 42.0465 31.275 43.227C28.5375 44.409 25.6125 45 22.5 45ZM22.5 40.5C27.525 40.5 31.7813 38.7562 35.2688 35.2687C38.7563 31.7812 40.5 27.525 40.5 22.5C40.5 17.475 38.7563 13.2188 35.2688 9.73125C31.7813 6.24375 27.525 4.5 22.5 4.5C17.475 4.5 13.2188 6.24375 9.73125 9.73125C6.24375 13.2188 4.5 17.475 4.5 22.5C4.5 27.525 6.24375 31.7812 9.73125 35.2687C13.2188 38.7562 17.475 40.5 22.5 40.5Z"
+                fill="#FFA228" />
+            </svg>
+          </button>
+          <button class="splide__arrow popular splide__arrow--next !text-white !bg-transparent" type="button"
+            aria-label="Next slide" aria-controls="splide01-track">
+            <svg class="!w-[18px] !h-[18px] md:!w-[31px] md:!h-[31px] " viewBox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 31.5L31.5 22.5L22.5 13.5L19.35 16.65L22.95 20.25L13.5 20.25V24.75L22.95 24.75L19.35 28.35L22.5 31.5ZM22.5 45C19.3875 45 16.4625 44.409 13.725 43.227C10.9875 42.0465 8.60625 40.4438 6.58125 38.4188C4.55625 36.3938 2.9535 34.0125 1.773 31.275C0.591 28.5375 0 25.6125 0 22.5C0 19.3875 0.591 16.4625 1.773 13.725C2.9535 10.9875 4.55625 8.60625 6.58125 6.58125C8.60625 4.55625 10.9875 2.95275 13.725 1.77075C16.4625 0.59025 19.3875 0 22.5 0C25.6125 0 28.5375 0.59025 31.275 1.77075C34.0125 2.95275 36.3938 4.55625 38.4188 6.58125C40.4438 8.60625 42.0465 10.9875 43.227 13.725C44.409 16.4625 45 19.3875 45 22.5C45 25.6125 44.409 28.5375 43.227 31.275C42.0465 34.0125 40.4438 36.3938 38.4188 38.4188C36.3938 40.4438 34.0125 42.0465 31.275 43.227C28.5375 44.409 25.6125 45 22.5 45ZM22.5 40.5C27.525 40.5 31.7813 38.7562 35.2688 35.2687C38.7563 31.7812 40.5 27.525 40.5 22.5C40.5 17.475 38.7563 13.2188 35.2688 9.73125C31.7813 6.24375 27.525 4.5 22.5 4.5C17.475 4.5 13.2188 6.24375 9.73125 9.73125C6.24375 13.2188 4.5 17.475 4.5 22.5C4.5 27.525 6.24375 31.7812 9.73125 35.2687C13.2188 38.7562 17.475 40.5 22.5 40.5Z"
+                fill="#FFA228" />
+            </svg>
+          </button>
+        </div>
+        <div style="background: linear-gradient(242.99deg, #F8E7DD -3.29%, #FFFAF0 118.42%) !important;"
+          class="splide__track !py-6">
+          <ul class="splide__list ">
+            <li class="splide__slide !w-[192px]   min-[480px]:!w-[230px]  sm:!w-[250px]  md:!w-[377px] md:!h-[189px]">
+              <img class="w-full h-full object-contain" src="./src/assets/popular_1.svg" alt="">
+            </li>
+            <li
+              class="splide__slide !w-[192px] !h-[96px] min-[480px]:!w-[230px] min-[480px]:!h-[105px] md:!w-[377px] md:!h-[189px]">
+              <img class="w-full h-full" src="./src/assets/popular_2.svg" alt="">
+            </li>
+            <li
+              class="splide__slide !w-[192px] !h-[96px] min-[480px]:!w-[230px] min-[480px]:!h-[105px] md:!w-[377px] md:!h-[189px]">
+              <img class="w-full h-full" src="./src/assets/popular_3.svg" alt="">
+            </li>
+            <li
+              class="splide__slide !w-[192px] !h-[96px] min-[480px]:!w-[230px] min-[480px]:!h-[105px] md:!w-[377px] md:!h-[189px]">
+              <img class="w-full h-full" src="./src/assets/popular_3.svg" alt="">
+            </li>
+
+          </ul>
+        </div>
+      </section>
+      <section id="image-carousel_2" class="splide px-2 ml-1" aria-label="Beautiful Images">
+        <div class="splide__arrows popular  splide__arrows--ltr">
+          <button class="splide__arrow splide__arrow--prev !text-white !bg-transparent  " type="button"
+            aria-label="Previous slide" aria-controls="splide01-track">
+            <svg class="!w-[18px] !h-[18px]  md:!w-[31px] md:!h-[31px] " viewBox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 31.5L31.5 22.5L22.5 13.5L19.35 16.65L22.95 20.25L13.5 20.25V24.75L22.95 24.75L19.35 28.35L22.5 31.5ZM22.5 45C19.3875 45 16.4625 44.409 13.725 43.227C10.9875 42.0465 8.60625 40.4438 6.58125 38.4188C4.55625 36.3938 2.9535 34.0125 1.773 31.275C0.591 28.5375 0 25.6125 0 22.5C0 19.3875 0.591 16.4625 1.773 13.725C2.9535 10.9875 4.55625 8.60625 6.58125 6.58125C8.60625 4.55625 10.9875 2.95275 13.725 1.77075C16.4625 0.59025 19.3875 0 22.5 0C25.6125 0 28.5375 0.59025 31.275 1.77075C34.0125 2.95275 36.3938 4.55625 38.4188 6.58125C40.4438 8.60625 42.0465 10.9875 43.227 13.725C44.409 16.4625 45 19.3875 45 22.5C45 25.6125 44.409 28.5375 43.227 31.275C42.0465 34.0125 40.4438 36.3938 38.4188 38.4188C36.3938 40.4438 34.0125 42.0465 31.275 43.227C28.5375 44.409 25.6125 45 22.5 45ZM22.5 40.5C27.525 40.5 31.7813 38.7562 35.2688 35.2687C38.7563 31.7812 40.5 27.525 40.5 22.5C40.5 17.475 38.7563 13.2188 35.2688 9.73125C31.7813 6.24375 27.525 4.5 22.5 4.5C17.475 4.5 13.2188 6.24375 9.73125 9.73125C6.24375 13.2188 4.5 17.475 4.5 22.5C4.5 27.525 6.24375 31.7812 9.73125 35.2687C13.2188 38.7562 17.475 40.5 22.5 40.5Z"
+                fill="#FFA228" />
+            </svg>
+          </button>
+          <button class="splide__arrow popular splide__arrow--next !text-white !bg-transparent" type="button"
+            aria-label="Next slide" aria-controls="splide01-track">
+            <svg class="!w-[18px] !h-[18px] md:!w-[31px] md:!h-[31px] " viewBox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.5 31.5L31.5 22.5L22.5 13.5L19.35 16.65L22.95 20.25L13.5 20.25V24.75L22.95 24.75L19.35 28.35L22.5 31.5ZM22.5 45C19.3875 45 16.4625 44.409 13.725 43.227C10.9875 42.0465 8.60625 40.4438 6.58125 38.4188C4.55625 36.3938 2.9535 34.0125 1.773 31.275C0.591 28.5375 0 25.6125 0 22.5C0 19.3875 0.591 16.4625 1.773 13.725C2.9535 10.9875 4.55625 8.60625 6.58125 6.58125C8.60625 4.55625 10.9875 2.95275 13.725 1.77075C16.4625 0.59025 19.3875 0 22.5 0C25.6125 0 28.5375 0.59025 31.275 1.77075C34.0125 2.95275 36.3938 4.55625 38.4188 6.58125C40.4438 8.60625 42.0465 10.9875 43.227 13.725C44.409 16.4625 45 19.3875 45 22.5C45 25.6125 44.409 28.5375 43.227 31.275C42.0465 34.0125 40.4438 36.3938 38.4188 38.4188C36.3938 40.4438 34.0125 42.0465 31.275 43.227C28.5375 44.409 25.6125 45 22.5 45ZM22.5 40.5C27.525 40.5 31.7813 38.7562 35.2688 35.2687C38.7563 31.7812 40.5 27.525 40.5 22.5C40.5 17.475 38.7563 13.2188 35.2688 9.73125C31.7813 6.24375 27.525 4.5 22.5 4.5C17.475 4.5 13.2188 6.24375 9.73125 9.73125C6.24375 13.2188 4.5 17.475 4.5 22.5C4.5 27.525 6.24375 31.7812 9.73125 35.2687C13.2188 38.7562 17.475 40.5 22.5 40.5Z"
+                fill="#FFA228" />
+            </svg>
+          </button>
+        </div>
+        <div class=" splide__track !py-6 bg-[#B2FFD2]">
+          <ul class="splide__list ">
+            <li class="splide__slide !w-[260px] !h-[96px]   md:!w-[560px] md:!h-[205px] !mr-[1rem]">
+              <img class="w-full h-full object-contain" src="./src/assets/popular_7.svg" alt="">
+            </li>
+
+            <li class="splide__slide !w-[260px] !h-[96px]   md:!w-[560px] md:!h-[205px] !mr-[1rem]">
+              <img class="w-full h-full" src="./src/assets/popular_8.svg" alt="">
+            </li>
+            <li class="splide__slide !w-[260px] !h-[96px]   md:!w-[560px] md:!h-[205px] !mr-[1rem]">
+              <img class="w-full h-full object-contain" src="./src/assets/popular_7.svg" alt="">
+            </li>
+
+            <li class="splide__slide !w-[260px] !h-[96px]   md:!w-[560px] md:!h-[205px] !mr-[1rem]">
+              <img class="w-full h-full" src="./src/assets/popular_8.svg" alt="">
+            </li>
+
+
+          </ul>
+        </div>
+      </section>
+
+
+    </section>
+    <!-- download button -->
+    <div class="text-center my-6 py-2">
+      <button
+        class="w-[259px] md:w-[300px] rounded-[5px] font-sans bg-[#F73D27] text-white text-[19px] md:text-[25px] font-bold h-[45px] md:h-[55px] hover:bg-[#c32f1f] hover:scale-[1.03] flex justify-center items-center mx-auto shadow-sm duration-500">Download
+        Our App</button>
+    </div>
     </div>
     <!-- app download section -->
     <div class="bg-[#FFA228] font-['Poppins']">

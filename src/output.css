@@ -633,10 +633,6 @@ video {
   top: 52%;
 }
 
-.bottom-\[34px\] {
-  bottom: 34px;
-}
-
 .z-\[2\] {
   z-index: 2;
 }
@@ -2197,11 +2193,6 @@ video {
 .after\:bottom-\[37px\]::after {
   content: var(--tw-content);
   bottom: 37px;
-}
-
-.after\:bottom-\[48px\]::after {
-  content: var(--tw-content);
-  bottom: 48px;
 }
 
 .after\:h-\[3px\]::after {
